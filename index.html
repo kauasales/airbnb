@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manual do Hóspede - Guia de Estadia</title>
+    <!-- Fonte Elegante -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Ícones elegantes -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Arquivo CSS Externo -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Imagens de Fundo Dinâmicas -->
+    <div class="bg-container">
+        <div class="bg-image active" style="background-image: url('https://encrypted-tbn0.gstatic.com/licensed-image?q=tbn:ANd9GcT9-HeEE63U2yNnRYEOu89Tv9Py75qo46TaLWtLASqB0UhZ5RUBnUZY1bv6PCU4kpEk5YT5n07l_s3Xtkw');"></div> <!-- Ar Condicionado -->
+        <div class="bg-image" style="background-image: url('https://encrypted-tbn0.gstatic.com/licensed-image?q=tbn:ANd9GcSTRlAWVWmi7sdtc_30HpG23RZuKp3j3cx9cacZsRw9t6-txIjuGcyiuQwIfMsFv5oVWcRtk_lNPpUs9JE');"></div> <!-- Plantas -->
+        <div class="bg-image" style="background-image: url('https://encrypted-tbn2.gstatic.com/licensed-image?q=tbn:ANd9GcQ2FwmiXjmzCPrcj2hD4mkLrE8sI5cZ4PsvPbkvGgJ1_dlZC3LABSEZZGGz9t3UBPO6CYFbmjdwZcxOiy8');"></div> <!-- Amenities -->
+        <div class="bg-image" style="background-image: url('https://encrypted-tbn1.gstatic.com/licensed-image?q=tbn:ANd9GcSMkE1ki8cCYlu0XEFNFGWNqQg8L4Yhdnpn8SaHvY9cw4S4EHhz6ICX5tnkdOAyfbs6KUSbnPejy5sP9jc');"></div> <!-- Filtro de Água -->
+        <div class="bg-image" style="background-image: url('https://encrypted-tbn0.gstatic.com/licensed-image?q=tbn:ANd9GcQpimt1gnnFLE73hFnJIAJksrhfOjro7ptGY_i38-aKUAz-PKFdp8jaODOgB2mRe6yp2R1CZP1shM6Sm3Q');"></div> <!-- Lavanderia -->
+        <div class="bg-image" style="background-image: url('https://encrypted-tbn1.gstatic.com/licensed-image?q=tbn:ANd9GcTc-JSqNoWW_MkNnC8MOSz71O91W2cpWDcap8rwp3Pbw7inv1tbRRruoN43Wabc2G9TX6tskyQwA6UFM_M');"></div> <!-- Acesso -->
+        <div class="bg-image" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLNoOXAb8VIQ4Jni7TNFhlNZpjdIyvbD15X8FMM0wt6YZ0ASfWpcxSGsA&s=10');"></div> <!-- Check out -->
+    </div>
+    <div class="bg-overlay"></div>
+
+    <!-- Cabeçalho de Boas-Vindas -->
+    <header>
+        <h1>Bem-vindo à sua Estadia</h1>
+        <p>Recomendações importantes para o seu conforto</p>
+    </header>
+
+    <!-- Menu de Abas Deslizante Horizontal -->
+    <div class="tabs-nav" id="tabsNav">
+        <button class="tab-btn active" onclick="switchTab(0)"><i class="fa-solid fa-snowflake"></i> Ar Condicionado</button>
+        <button class="tab-btn" onclick="switchTab(1)"><i class="fa-solid fa-leaf"></i> Plantas</button>
+        <button class="tab-btn" onclick="switchTab(2)"><i class="fa-solid fa-pump-soap"></i> Amenities</button>
+        <button class="tab-btn" onclick="switchTab(3)"><i class="fa-solid fa-faucet-drip"></i> Água</button>
+        <button class="tab-btn" onclick="switchTab(4)"><i class="fa-solid fa-shirt"></i> Lavanderia</button>
+        <button class="tab-btn" onclick="switchTab(5)"><i class="fa-solid fa-door-closed"></i> Pátio Traseiro</button>
+        <button class="tab-btn" onclick="switchTab(6)"><i class="fa-solid fa-key"></i> Check-out</button>
+    </div>
+
+    <!-- Container dos Cards Interativos -->
+    <div class="content-container">
+        
+        <!-- Painel 1: Ar Condicionado -->
+        <div class="tab-panel active">
+            <div class="panel-header">
+                <div class="icon-wrap"><i class="fa-solid fa-snowflake"></i></div>
+                <h2>Ar Condicionado</h2>
+            </div>
+            <div class="panel-body">
+                <p>Possuímos ar-condicionado em todos os ambientes para que sua estadia seja o mais agradável possível.</p>
+                <div class="highlight-box">
+                    <strong>Atenção:</strong> Para amenizar o alto custo de energia elétrica em Manaus, por gentileza, <strong>desligue os aparelhos</strong> ao deixar a acomodação.
+                </div>
+            </div>
+        </div>
+
+        <!-- Painel 2: Plantas -->
+        <div class="tab-panel">
+            <div class="panel-header">
+                <div class="icon-wrap"><i class="fa-solid fa-leaf"></i></div>
+                <h2>Cuidado e Amor</h2>
+            </div>
+            <div class="panel-body">
+                <p>Amamos profundamente as plantas e os animais por aqui! 🌿🐶</p>
+                <p style="margin-top: 10px;">Deixamos um <strong>borrifador no pátio externo</strong> e outro <strong>dentro da casa</strong>. Sinta-se à vontade para nos ajudar a mantê-las hidratadas e felizes!</p>
+            </div>
+        </div>
+
+        <!-- Painel 3: Amenities -->
+        <div class="tab-panel">
+            <div class="panel-header">
+                <div class="icon-wrap"><i class="fa-solid fa-pump-soap"></i></div>
+                <h2>Amenities e Mimos</h2>
+            </div>
+            <div class="panel-body">
+                <p>Preparamos tudo com carinho. Você encontrará toalhas limpas e amenites de banho na sua chegada.</p>
+                <p style="margin-top: 10px;">Também disponibilizamos uma base de cozinha: <strong>café, açúcar, sal e óleo de cozinha</strong>.</p>
+                <div class="highlight-box">
+                    Nota: O kit é cortesia de entrada. <strong>Não realizamos reposições</strong> extras destes itens durante a estadia.
+                </div>
+            </div>
+        </div>
+
+        <!-- Painel 4: Filtro de Água -->
+        <div class="tab-panel">
+            <div class="panel-header">
+                <div class="icon-wrap"><i class="fa-solid fa-faucet-drip"></i></div>
+                <h2>Água Fresca</h2>
+            </div>
+            <div class="panel-body">
+                <p>Para sua total comodidade, a casa conta com um <strong>filtro de água natural</strong> diretamente na cozinha.</p>
+                <div class="highlight-box">
+                    <strong>Dica de Gelo:</strong> O filtro fornece água em temperatura natural. Para beber geladinha, preparamos e deixamos <strong>cubos de gelo prontos no congelador</strong> para você!
+                </div>
+            </div>
+        </div>
+
+        <!-- Painel 5: Lavanderia -->
+        <div class="tab-panel">
+            <div class="panel-header">
+                <div class="icon-wrap"><i class="fa-solid fa-shirt"></i></div>
+                <h2>Serviço de Lavanderia</h2>
+            </div>
+            <div class="panel-body">
+                <p>Mantenha suas roupas sempre limpas e frescas sem esforço algum!</p>
+                <p style="margin-top: 10px;"><strong>Como funciona:</strong> Você só precisa nos entregar o cesto de roupas. Nós faremos o serviço e te devolveremos tudo limpo e seco.</p>
+                <div class="highlight-box">
+                    A <strong>primeira lavagem é gratuita</strong>! Para as lavagens seguintes, cobramos uma taxa de apenas <strong>R$ 25 por cesto</strong>.
+                </div>
+                <!-- Botão dinâmico de solicitação pelo Whatsapp -->
+                <a href="https://wa.me/5592982308520?text=Olá!%20Gostaria%20de%20solicitar%20o%20serviço%20de%20lavanderia%20da%20minha%20hospedagem.%20🧺" target="_blank" class="btn-whatsapp">
+                    <i class="fa-brands fa-whatsapp"></i> Solicitar Lavanderia
+                </a>
+            </div>
+        </div>
+
+        <!-- Painel 6: Acesso ao Pátio -->
+        <div class="tab-panel">
+            <div class="panel-header">
+                <div class="icon-wrap"><i class="fa-solid fa-door-closed"></i></div>
+                <h2>Área de Manutenção</h2>
+            </div>
+            <div class="panel-body">
+                <p>O pátio de trás é uma área restrita, utilizada exclusivamente para a podagem, cuidados botânicos e manutenção das plantas da casa.</p>
+                <p style="margin-top: 10px;">Por esse motivo, <strong>a porta da cozinha permanece trancada</strong>. Não há acesso de hóspedes nem de membros da nossa equipe por ali durante a estadia 🥰.</p>
+            </div>
+        </div>
+
+        <!-- Painel 7: Check-out -->
+        <div class="tab-panel">
+            <div class="panel-header">
+                <div class="icon-wrap"><i class="fa-solid fa-key"></i></div>
+                <h2>Seu Check-out</h2>
+            </div>
+            <div class="panel-body">
+                <p>Esperamos que tenha tido dias incríveis! A saída pode ser realizada <strong>até as 11:00h</strong> da manhã.</p>
+                <p style="margin-top: 10px;">Pedimos gentilmente que <strong>nos avise sobre seu horário de saída</strong>. O anfitrião ou alguém do nosso time irá te receber para recolher as chaves pessoalmente.</p>
+                <!-- Botão dinâmico de aviso pelo Whatsapp -->
+                <a href="https://wa.me/5592982308520?text=Olá!%20Estou%20passando%20para%20avisar%20que%20meu%20check-out%20está%20planejado%20para%20as%20" target="_blank" class="btn-whatsapp" id="checkoutBtn">
+                    <i class="fa-brands fa-whatsapp"></i> Avisar Horário de Saída
+                </a>
+                <p style="margin-top: 15px; font-weight: 500; text-align: center; color: var(--primary);">Tenha uma ótima estadia! 🥰</p>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Guia visual inferior -->
+    <div class="footer-hint">
+        <i class="fa-solid fa-angles-left"></i> Deslize o menu ou a tela para navegar <i class="fa-solid fa-angles-right"></i>
+    </div>
+
+    <!-- Arquivo JS Externo -->
+    <script src="script.js"></script>
+</body>
+</html>
