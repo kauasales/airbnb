@@ -20,19 +20,26 @@ function applyTranslations(lang) {
     document.getElementById('menu5').textContent = t.menu5;
     document.getElementById('menu6').textContent = t.menu6;
     
-    // Panel 0 - Como Chegar (ENDEREÇO FIXO EM PORTUGUÊS)
+    // Panel 0 - Check-in
     document.getElementById('panel0Title').textContent = t.panel0Title;
-    // O endereço NÃO é traduzido - mantém o texto original em português
-    // Os campos panel0AddrTitle, panel0AddrDesc e panel0Tag são mantidos como estão no HTML
-    // e não são alterados pelo JavaScript
+    document.getElementById('panel0AddrTitle').textContent = t.panel0AddrTitle;
+    document.getElementById('panel0AddrDesc').textContent = t.panel0AddrDesc;
+    document.getElementById('panel0Tag').textContent = t.panel0Tag;
+    document.getElementById('sub0_0').textContent = t.sub0_0;
+    document.getElementById('sub0_1').textContent = t.sub0_1;
+    document.getElementById('checkinInfoTitle').textContent = t.checkinInfoTitle;
+    document.getElementById('checkinInfoDesc').textContent = t.checkinInfoDesc;
+    document.getElementById('checkinInfoTag').textContent = t.checkinInfoTag;
+    document.getElementById('checkinBtnLabel').textContent = t.checkinBtnLabel;
     
-    // Panel 1
+    // Panel 1 - Acomodação
     document.getElementById('panel1Title').textContent = t.panel1Title;
     document.getElementById('sub1_0').textContent = t.sub1_0;
     document.getElementById('sub1_1').textContent = t.sub1_1;
     document.getElementById('sub1_2').textContent = t.sub1_2;
     document.getElementById('sub1_3').textContent = t.sub1_3;
     document.getElementById('sub1_4').textContent = t.sub1_4;
+    document.getElementById('sub1_5').textContent = t.sub1_5;
     
     document.getElementById('climaTitle').textContent = t.climaTitle;
     document.getElementById('climaDesc').textContent = t.climaDesc;
@@ -53,23 +60,43 @@ function applyTranslations(lang) {
     document.getElementById('mimosTag').textContent = t.mimosTag;
     document.getElementById('mimosObs').innerHTML = `<strong>Obs:</strong> ${t.mimosObs}`;
     
+    document.getElementById('estacionamentoTitle').textContent = t.estacionamentoTitle;
+    document.getElementById('estacionamentoDesc').textContent = t.estacionamentoDesc;
+    document.getElementById('estacionamentoTag1').textContent = t.estacionamentoTag1;
+    document.getElementById('estacionamentoTag2').textContent = t.estacionamentoTag2;
+    document.getElementById('estacionamentoObs').innerHTML = `<strong>Obs:</strong> ${t.estacionamentoObs}`;
+    
     document.getElementById('plantasTitle').textContent = t.plantasTitle;
     document.getElementById('plantasDesc').textContent = t.plantasDesc;
     
-    // Panel 2
+    // Panel 2 - Compras
     document.getElementById('panel2Title').textContent = t.panel2Title;
+    document.getElementById('sub2_0').textContent = t.sub2_0;
+    document.getElementById('sub2_1').textContent = t.sub2_1;
+    
     document.getElementById('mercado1Title').textContent = t.mercado1Title;
     document.getElementById('mercado1Desc').textContent = t.mercado1Desc;
     document.getElementById('mercado1Map').innerHTML = `<i class="fa-solid fa-location-dot"></i> ${t.mercado1Map}`;
+    document.getElementById('mercado1Tag').textContent = t.mercado1Tag;
+    
     document.getElementById('mercado2Title').textContent = t.mercado2Title;
     document.getElementById('mercado2Desc').textContent = t.mercado2Desc;
     document.getElementById('mercado2Map').innerHTML = `<i class="fa-solid fa-location-dot"></i> ${t.mercado2Map}`;
     
-    // Panel 3
+    document.getElementById('mercado3Title').textContent = t.mercado3Title;
+    document.getElementById('mercado3Desc').textContent = t.mercado3Desc;
+    document.getElementById('mercado3Map').innerHTML = `<i class="fa-solid fa-location-dot"></i> ${t.mercado3Map}`;
+    
+    document.getElementById('shoppingTitle').textContent = t.shoppingTitle;
+    document.getElementById('shoppingDesc').textContent = t.shoppingDesc;
+    document.getElementById('shoppingMap').innerHTML = `<i class="fa-solid fa-location-dot"></i> ${t.shoppingMap}`;
+    
+    // Panel 3 - Restaurantes
     document.getElementById('panel3Title').textContent = t.panel3Title;
     document.getElementById('rest1Title').textContent = t.rest1Title;
     document.getElementById('rest1Desc').textContent = t.rest1Desc;
     document.getElementById('rest1Map').innerHTML = `<i class="fa-solid fa-location-dot"></i> ${t.rest1Map}`;
+    document.getElementById('rest1Tag').textContent = t.rest1Tag;
     document.getElementById('rest2Title').textContent = t.rest2Title;
     document.getElementById('rest2Desc').textContent = t.rest2Desc;
     document.getElementById('rest2Map').innerHTML = `<i class="fa-solid fa-location-dot"></i> ${t.rest2Map}`;
@@ -77,7 +104,7 @@ function applyTranslations(lang) {
     document.getElementById('rest3Desc').textContent = t.rest3Desc;
     document.getElementById('rest3Map').innerHTML = `<i class="fa-solid fa-location-dot"></i> ${t.rest3Map}`;
     
-    // Panel 4
+    // Panel 4 - Turismo
     document.getElementById('panel4Title').textContent = t.panel4Title;
     document.getElementById('tur1Title').textContent = t.tur1Title;
     document.getElementById('tur1Desc').textContent = t.tur1Desc;
@@ -104,7 +131,7 @@ function applyTranslations(lang) {
     document.getElementById('tur8Desc').textContent = t.tur8Desc;
     document.getElementById('tur8Map').innerHTML = `<i class="fa-solid fa-location-dot"></i> ${t.tur8Map}`;
     
-    // Panel 5
+    // Panel 5 - Saúde
     document.getElementById('panel5Title').textContent = t.panel5Title;
     document.getElementById('saude1Title').textContent = t.saude1Title;
     document.getElementById('saude1Desc').textContent = t.saude1Desc;
@@ -116,7 +143,7 @@ function applyTranslations(lang) {
     document.getElementById('saude3Desc').textContent = t.saude3Desc;
     document.getElementById('saude3Map').innerHTML = `<i class="fa-solid fa-location-dot"></i> ${t.saude3Map}`;
     
-    // Panel 6
+    // Panel 6 - Check-out
     document.getElementById('panel6Title').textContent = t.panel6Title;
     document.getElementById('checkoutTitle').textContent = t.checkoutTitle;
     document.getElementById('checkoutDesc').textContent = t.checkoutDesc;

@@ -7,36 +7,43 @@ const translations = {
         langToggle: "EN",
         
         // Menu Principal
-        menu0: "Chegar",
+        menu0: "Check-in",
         menu1: "Casa",
         menu2: "Compras",
-        menu3: "Comer",
+        menu3: "Restaurantes",
         menu4: "Turismo",
         menu5: "Saúde",
         menu6: "Saída",
         
-        // Panel 0 - Como Chegar (ENDEREÇO FIXO EM PORTUGUÊS)
-        panel0Title: "Como Chegar",
+        // Panel 0 - Check-in
+        panel0Title: "Check-in",
         panel0AddrTitle: "Av. Ramos Ferreira, 1031",
         panel0AddrDesc: "Bloco 18, Apto 12 · Centro, Manaus · CEP 69020-250",
         panel0Tag: "Parque Residencial Manaus",
+        sub0_0: "Como chegar",
+        sub0_1: "Informações",
+        checkinInfoTitle: "Informações de Check-in",
+        checkinInfoDesc: "Informe seu horário de chegada e solicite as senhas de acesso ao Airbnb.",
+        checkinInfoTag: "🔑 Senhas fornecidas via WhatsApp",
+        checkinBtnLabel: "Informar horário e solicitar senhas",
         
         // Panel 1 - Acomodação
         panel1Title: "Acomodação",
         sub1_0: "Clima",
         sub1_1: "Lavanderia",
-        sub1_2: "Pátio de trás",
+        sub1_2: "Pátio",
         sub1_3: "Mimos",
-        sub1_4: "Plantas",
+        sub1_4: "Estacionamento",
+        sub1_5: "Plantas",
         
         climaTitle: "Ar-condicionado em todos os ambientes",
         climaDesc: "Fique à vontade para ajustar a temperatura. Lembre-se de desligar ao sair para ajudar no consumo de energia.",
-        climaTag: "💡 Dica: desligue ao sair",
+        climaTag: "Dica: desligue ao sair",
         
         lavanderiaTitle: "Lavanderia",
         lavanderiaDesc: "Entregue e receba o cesto de roupas lavadas e sequinhas.",
         lavanderiaTag1: "Serviço gratuito",
-        lavanderiaTag2: "Solicite com antencedência",
+        lavanderiaTag2: "Solicite com antecedência",
         lavanderiaBtn: "Solicitar agora",
         
         patioTitle: "Pátio de trás",
@@ -48,23 +55,43 @@ const translations = {
         mimosTag: "Cortesia de entrada",
         mimosObs: "Não fazemos reposições extras durante a estadia.",
         
+        estacionamentoTitle: "Estacionamento",
+        estacionamentoDesc: "Estacionamento gratuito no local. As vagas não são numeradas - estacione em qualquer vaga disponível.",
+        estacionamentoTag1: "Gratuito",
+        estacionamentoTag2: "Não estacionar em frente à lixeira",
+        estacionamentoObs: "Evite estacionar em frente à lixeira para não atrapalhar o serviço de coleta de lixo.",
+        
         plantasTitle: "Cuide das plantinhas",
         plantasDesc: "Deixamos borrifadores no pátio da frente e dentro de casa. Ajude a mantê-las hidratadas! 🌿",
         
-        // Panel 2 - Mercados
-        panel2Title: "Mercados",
-        mercado1Title: "Supermercado Veneza",
-        mercado1Desc: "Produtos variados e de boa qualidade. Próximo a acomodação.",
+        // Panel 2 - Compras
+        panel2Title: "Compras",
+        sub2_0: "Supermercados",
+        sub2_1: "Shopping",
+        
+        mercado1Title: "Carrefour",
+        mercado1Desc: "Ao lado do Manauara Shopping. Ampla variedade de produtos e marcas.",
         mercado1Map: "Ver no mapa",
-        mercado2Title: "Supermercados DB",
-        mercado2Desc: "Ampla variedade de marcas e produtos. A melhor opção para compras completas.",
+        mercado1Tag: "⭐ Sugestão do Salem",
+        
+        mercado2Title: "Supermercado Veneza",
+        mercado2Desc: "Produtos variados e de boa qualidade. Próximo à acomodação.",
         mercado2Map: "Ver no mapa",
+        
+        mercado3Title: "Supermercados DB",
+        mercado3Desc: "Ampla variedade de marcas e produtos. A melhor opção para compras completas.",
+        mercado3Map: "Ver no mapa",
+        
+        shoppingTitle: "Manauara Shopping",
+        shoppingDesc: "Maior shopping de Manaus com ampla variedade de lojas, praça de alimentação completa e cinema.",
+        shoppingMap: "Ver no mapa",
         
         // Panel 3 - Restaurantes
         panel3Title: "Restaurantes",
         rest1Title: "Taboa Peixaria",
         rest1Desc: "Peixaria com vista para o Rio Negro. Especializada em peixes amazônicos.",
         rest1Map: "Ver no mapa",
+        rest1Tag: "⭐ Sugestão do Salem",
         rest2Title: "Tambaqui de Banda",
         rest2Desc: "Peixes amazônicos assados na brasa. Ao lado do Teatro Amazonas.",
         rest2Map: "Ver no mapa",
@@ -72,7 +99,7 @@ const translations = {
         rest3Desc: "Café da manhã regional com x-caboquinho e almoço caseiro.",
         rest3Map: "Ver no mapa",
         
-        // Panel 4 - Turismo (COM DESCRIÇÕES)
+        // Panel 4 - Turismo
         panel4Title: "Pontos Turísticos",
         tur1Title: "Teatro Amazonas",
         tur1Desc: "O cartão-postal mais famoso de Manaus. Arquitetura suntuosa da época da borracha, com cúpula colorida e materiais importados da Europa.",
@@ -127,31 +154,38 @@ const translations = {
         langToggle: "ES",
         
         // Menu Principal
-        menu0: "Arrive",
+        menu0: "Check-in",
         menu1: "Home",
         menu2: "Shopping",
-        menu3: "Eat",
+        menu3: "Restaurants",
         menu4: "Tourism",
         menu5: "Health",
         menu6: "Checkout",
         
-        // Panel 0 - Como Chegar (ENDEREÇO MANTIDO EM PORTUGUÊS)
-        panel0Title: "How to Get There",
+        // Panel 0 - Check-in
+        panel0Title: "Check-in",
         panel0AddrTitle: "Av. Ramos Ferreira, 1031",
         panel0AddrDesc: "Bloco 18, Apto 12 · Centro, Manaus · CEP 69020-250",
         panel0Tag: "Parque Residencial Manaus",
+        sub0_0: "How to get there",
+        sub0_1: "Information",
+        checkinInfoTitle: "Check-in Information",
+        checkinInfoDesc: "Inform your arrival time and request the Airbnb access passwords.",
+        checkinInfoTag: "🔑 Passwords provided via WhatsApp",
+        checkinBtnLabel: "Inform time and request passwords",
         
-        // Panel 1 - Acomodação
+        // Panel 1 - Accommodation
         panel1Title: "Accommodation",
         sub1_0: "Climate",
         sub1_1: "Laundry",
         sub1_2: "Backyard",
         sub1_3: "Welcome Kit",
-        sub1_4: "Plants",
+        sub1_4: "Parking",
+        sub1_5: "Plants",
         
         climaTitle: "Air conditioning in all rooms",
         climaDesc: "Feel free to adjust the temperature. Remember to turn it off when leaving to help save energy.",
-        climaTag: "💡 Tip: turn off when leaving",
+        climaTag: "Tip: turn off when leaving",
         
         lavanderiaTitle: "Laundry Service",
         lavanderiaDesc: "Drop off and receive your laundry basket clean and dry.",
@@ -168,23 +202,43 @@ const translations = {
         mimosTag: "Complimentary",
         mimosObs: "We do not provide extra replacements during your stay.",
         
+        estacionamentoTitle: "Parking",
+        estacionamentoDesc: "Free on-site parking. Spaces are not numbered - park in any available spot.",
+        estacionamentoTag1: "Free",
+        estacionamentoTag2: "Do not park in front of the trash bin",
+        estacionamentoObs: "Avoid parking in front of the trash bin to not interfere with the garbage collection service.",
+        
         plantasTitle: "Take care of the plants",
         plantasDesc: "We left sprayers in the front yard and inside the house. Help keep them hydrated! 🌿",
         
-        // Panel 2 - Mercados
-        panel2Title: "Grocery Stores",
-        mercado1Title: "Supermercado Veneza",
-        mercado1Desc: "Varied products of good quality. Close to the accommodation.",
+        // Panel 2 - Shopping
+        panel2Title: "Shopping",
+        sub2_0: "Supermarkets",
+        sub2_1: "Shopping Mall",
+        
+        mercado1Title: "Carrefour",
+        mercado1Desc: "Next to Manauara Shopping. Wide variety of products and brands.",
         mercado1Map: "View on map",
-        mercado2Title: "Supermercados DB",
-        mercado2Desc: "Wide variety of brands and products. The best option for complete shopping.",
+        mercado1Tag: "⭐ Salem's Suggestion",
+        
+        mercado2Title: "Supermercado Veneza",
+        mercado2Desc: "Varied products of good quality. Close to the accommodation.",
         mercado2Map: "View on map",
         
-        // Panel 3 - Restaurantes
+        mercado3Title: "Supermercados DB",
+        mercado3Desc: "Wide variety of brands and products. The best option for complete shopping.",
+        mercado3Map: "View on map",
+        
+        shoppingTitle: "Manauara Shopping",
+        shoppingDesc: "Manaus' largest shopping mall with a wide variety of stores, complete food court, and cinema.",
+        shoppingMap: "View on map",
+        
+        // Panel 3 - Restaurants
         panel3Title: "Restaurants",
         rest1Title: "Taboa Peixaria",
         rest1Desc: "Seafood restaurant with a view of the Rio Negro. Specializing in Amazonian fish.",
         rest1Map: "View on map",
+        rest1Tag: "⭐ Salem's Suggestion",
         rest2Title: "Tambaqui de Banda",
         rest2Desc: "Amazonian fish grilled over charcoal. Next to Teatro Amazonas.",
         rest2Map: "View on map",
@@ -192,7 +246,7 @@ const translations = {
         rest3Desc: "Regional breakfast with x-caboquinho and homemade lunch.",
         rest3Map: "View on map",
         
-        // Panel 4 - Turismo (COM DESCRIÇÕES EM INGLÊS)
+        // Panel 4 - Tourism
         panel4Title: "Tourist Attractions",
         tur1Title: "Teatro Amazonas",
         tur1Desc: "Manaus' most famous landmark. Sumptuous architecture from the rubber boom era, with a colorful dome and materials imported from Europe.",
@@ -219,7 +273,7 @@ const translations = {
         tur8Desc: "Manaus' largest shopping mall with a wide variety of stores, complete food court, and cinema. Ideal for shopping and leisure.",
         tur8Map: "View on map",
         
-        // Panel 5 - Saúde
+        // Panel 5 - Health
         panel5Title: "Health",
         saude1Title: "Santo Remédio",
         saude1Desc: "24-hour service. Ideal for nighttime emergencies.",
@@ -247,31 +301,38 @@ const translations = {
         langToggle: "PT",
         
         // Menu Principal
-        menu0: "Llegar",
+        menu0: "Check-in",
         menu1: "Casa",
         menu2: "Compras",
-        menu3: "Comer",
+        menu3: "Restaurantes",
         menu4: "Turismo",
         menu5: "Salud",
         menu6: "Salida",
         
-        // Panel 0 - Como Chegar (ENDEREÇO MANTIDO EM PORTUGUÊS)
-        panel0Title: "Cómo Llegar",
+        // Panel 0 - Check-in
+        panel0Title: "Check-in",
         panel0AddrTitle: "Av. Ramos Ferreira, 1031",
         panel0AddrDesc: "Bloco 18, Apto 12 · Centro, Manaus · CEP 69020-250",
         panel0Tag: "Parque Residencial Manaus",
+        sub0_0: "Cómo llegar",
+        sub0_1: "Información",
+        checkinInfoTitle: "Información de Check-in",
+        checkinInfoDesc: "Informa tu hora de llegada y solicita las contraseñas de acceso al Airbnb.",
+        checkinInfoTag: "🔑 Contraseñas proporcionadas vía WhatsApp",
+        checkinBtnLabel: "Informar hora y solicitar contraseñas",
         
-        // Panel 1 - Acomodación
+        // Panel 1 - Alojamiento
         panel1Title: "Alojamiento",
         sub1_0: "Clima",
         sub1_1: "Lavandería",
-        sub1_2: "Patio trasero",
+        sub1_2: "Patio",
         sub1_3: "Mimos",
-        sub1_4: "Plantas",
+        sub1_4: "Estacionamiento",
+        sub1_5: "Plantas",
         
         climaTitle: "Aire acondicionado en todos los ambientes",
         climaDesc: "Siéntase libre de ajustar la temperatura. Recuerde apagarlo al salir para ayudar a ahorrar energía.",
-        climaTag: "💡 Consejo: apague al salir",
+        climaTag: "Consejo: apague al salir",
         
         lavanderiaTitle: "Lavandería",
         lavanderiaDesc: "Entregue y reciba el cesto de ropa lavada y seca.",
@@ -288,23 +349,43 @@ const translations = {
         mimosTag: "Cortesía de entrada",
         mimosObs: "No hacemos reposiciones extras durante la estadía.",
         
+        estacionamentoTitle: "Estacionamiento",
+        estacionamentoDesc: "Estacionamiento gratuito en el lugar. Las plazas no están numeradas - estacione en cualquier plaza disponible.",
+        estacionamentoTag1: "Gratuito",
+        estacionamentoTag2: "No estacionar frente al contenedor de basura",
+        estacionamentoObs: "Evite estacionar frente al contenedor de basura para no interferir con el servicio de recogida de basura.",
+        
         plantasTitle: "Cuida las plantitas",
         plantasDesc: "Dejamos rociadores en el patio delantero y dentro de casa. ¡Ayuda a mantenerlas hidratadas! 🌿",
         
-        // Panel 2 - Mercados
-        panel2Title: "Mercados",
-        mercado1Title: "Supermercado Veneza",
-        mercado1Desc: "Productos variados y de buena calidad. Cerca del alojamiento.",
+        // Panel 2 - Compras
+        panel2Title: "Compras",
+        sub2_0: "Supermercados",
+        sub2_1: "Centro Comercial",
+        
+        mercado1Title: "Carrefour",
+        mercado1Desc: "Al lado de Manauara Shopping. Amplia variedad de productos y marcas.",
         mercado1Map: "Ver en el mapa",
-        mercado2Title: "Supermercados DB",
-        mercado2Desc: "Amplia variedad de marcas y productos. La mejor opción para compras completas.",
+        mercado1Tag: "⭐ Sugerencia de Salem",
+        
+        mercado2Title: "Supermercado Veneza",
+        mercado2Desc: "Productos variados y de buena calidad. Cerca del alojamiento.",
         mercado2Map: "Ver en el mapa",
+        
+        mercado3Title: "Supermercados DB",
+        mercado3Desc: "Amplia variedad de marcas y productos. La mejor opción para compras completas.",
+        mercado3Map: "Ver en el mapa",
+        
+        shoppingTitle: "Manauara Shopping",
+        shoppingDesc: "El centro comercial más grande de Manaus con amplia variedad de tiendas, plazoleta de comidas completa y cine.",
+        shoppingMap: "Ver en el mapa",
         
         // Panel 3 - Restaurantes
         panel3Title: "Restaurantes",
         rest1Title: "Taboa Peixaria",
         rest1Desc: "Pescadería con vista al Río Negro. Especializada en pescados amazónicos.",
         rest1Map: "Ver en el mapa",
+        rest1Tag: "⭐ Sugerencia de Salem",
         rest2Title: "Tambaqui de Banda",
         rest2Desc: "Pescados amazónicos asados a la brasa. Al lado del Teatro Amazonas.",
         rest2Map: "Ver en el mapa",
@@ -312,7 +393,7 @@ const translations = {
         rest3Desc: "Desayuno regional con x-caboquinho y almuerzo casero.",
         rest3Map: "Ver en el mapa",
         
-        // Panel 4 - Turismo (COM DESCRIÇÕES EM ESPANHOL)
+        // Panel 4 - Turismo
         panel4Title: "Puntos Turísticos",
         tur1Title: "Teatro Amazonas",
         tur1Desc: "La postal más famosa de Manaus. Arquitectura suntuosa de la época del caucho, con cúpula colorida y materiales importados de Europa.",
