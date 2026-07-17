@@ -12,7 +12,7 @@ const translations = {
         menu3: "Restaurantes",
         menu4: "Turismo",
         menu5: "Saúde",
-        menu6: "Saída",
+        menu6: "Check-out",
         
         // Panel 0 - Check-in
         panel0Title: "Check-in",
@@ -21,7 +21,7 @@ const translations = {
         panel0Tag: "Parque Residencial Manaus",
         sub0_0: "Como chegar",
         sub0_1: "Informações",
-        checkinInfoTitle: "Informações de Check-in",
+        checkinInfoTitle: "Informações de check-in",
         checkinInfoDesc: "Informe seu horário de chegada e solicite as senhas de acesso ao Airbnb.",
         checkinInfoTag: "🔑 Senhas fornecidas via WhatsApp",
         checkinBtnLabel: "Informar horário e solicitar senhas",
@@ -141,7 +141,7 @@ const translations = {
         panel6Title: "Check-out",
         checkoutTitle: "Saída até 11:00h",
         checkoutDesc: "Avise seu horário com antecedência.",
-        checkoutBtnLabel: "Avisar horário de saída",
+        checkoutBtnLabel: "Avisar horário de chek-out",
         
         // Footer
         footerHint: "Deslize para navegar"
@@ -152,22 +152,22 @@ const translations = {
         langToggle: "ES",
         
         // Menu Principal
-        menu0: "Check-in",
+        menu0: "Check in",
         menu1: "Home",
         menu2: "Shopping",
         menu3: "Restaurants",
         menu4: "Tourism",
         menu5: "Health",
-        menu6: "Checkout",
+        menu6: "Check out",
         
         // Panel 0 - Check-in
-        panel0Title: "Check-in",
+        panel0Title: "Check in",
         panel0AddrTitle: "Av. Ramos Ferreira, 1031",
         panel0AddrDesc: "Bloco 18, Apto 12 · Centro, Manaus · CEP 69020-250",
         panel0Tag: "Parque Residencial Manaus",
         sub0_0: "How to get there",
         sub0_1: "Information",
-        checkinInfoTitle: "Check-in Information",
+        checkinInfoTitle: "Check in Information",
         checkinInfoDesc: "Inform your arrival time and request the Airbnb access passwords.",
         checkinInfoTag: "🔑 Passwords provided via WhatsApp",
         checkinBtnLabel: "Inform time and request passwords",
@@ -284,10 +284,10 @@ const translations = {
         saude3Map: "View on map",
         
         // Panel 6 - Check-out
-        panel6Title: "Check-out",
-        checkoutTitle: "Checkout until 11:00 AM",
+        panel6Title: "Check out",
+        checkoutTitle: "Check out until 11:00 AM",
         checkoutDesc: "Let us know your time in advance.",
-        checkoutBtnLabel: "Notify checkout time",
+        checkoutBtnLabel: "Notify check out time",
         
         // Footer
         footerHint: "Swipe to navigate"
@@ -304,7 +304,7 @@ const translations = {
         menu3: "Restaurantes",
         menu4: "Turismo",
         menu5: "Salud",
-        menu6: "Salida",
+        menu6: "Check-out",
         
         // Panel 0 - Check-in
         panel0Title: "Check-in",
@@ -313,7 +313,7 @@ const translations = {
         panel0Tag: "Parque Residencial Manaus",
         sub0_0: "Cómo llegar",
         sub0_1: "Información",
-        checkinInfoTitle: "Información de Check-in",
+        checkinInfoTitle: "Información de check-in",
         checkinInfoDesc: "Informa tu hora de llegada y solicita las contraseñas de acceso al Airbnb.",
         checkinInfoTag: "🔑 Contraseñas proporcionadas vía WhatsApp",
         checkinBtnLabel: "Informar hora y solicitar contraseñas",
@@ -433,7 +433,7 @@ const translations = {
         panel6Title: "Check-out",
         checkoutTitle: "Salida hasta las 11:00h",
         checkoutDesc: "Avise su horario con anticipación.",
-        checkoutBtnLabel: "Avisar horario de salida",
+        checkoutBtnLabel: "Avisar horario de check-out",
         
         // Footer
         footerHint: "Desliza para navegar"
