@@ -123,6 +123,7 @@ header p {
     gap: 6px;
     padding-bottom: 12px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    scrollbar-width: none;
 }
 
 .sub-tab-btn {
@@ -152,6 +153,7 @@ header p {
     justify-content: center;
     padding: 10px 20px 20px;
     position: relative;
+    overflow: hidden; 
 }
 
 .tab-panel {
@@ -167,24 +169,33 @@ header p {
     display: none;
     flex-direction: column;
     gap: 12px;
-    height: fit-content;
+    max-height: 100%; 
+    height: auto;
 }
 
 .tab-panel.active {
     display: flex;
-        height: fit-content;
 }
 
-.sub-panel-content {
+/* Correção Crítica do Bug das Sub-Abas */
+.tab-panel .sub-panel-content {
     display: none;
-    font-size: 0.9rem;
-    line-height: 1.5;
     flex-direction: column;
-    height: 100%;
 }
 
-.sub-panel-content.active {
+.tab-panel .sub-panel-content.active {
     display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    padding-right: 4px;
+}
+
+.sub-panel-content::-webkit-scrollbar {
+    width: 4px;
+}
+.sub-panel-content::-webkit-scrollbar-thumb {
+    background: rgba(194, 163, 131, 0.3);
+    border-radius: 4px;
 }
 
 .panel-header {
@@ -307,7 +318,7 @@ header p {
     padding: 12px;
     border-radius: 12px;
     font-weight: 600;
-    font-size: 0.9rem;;
+    font-size: 0.9rem;
 }
 
 .footer-hint {

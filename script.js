@@ -3,39 +3,64 @@ const panels = document.querySelectorAll('.content-container .tab-panel');
 const backgrounds = document.querySelectorAll('.bg-container .bg-image');
 const tabsNav = document.getElementById('tabsNav');
 
-// Lógica Genérica de Sub-abas (Funciona para Qualquer Painel Principal)
-function switchSubTab(panelIndex, subIndex) {
-    const targetPanel = document.getElementById(`panel-${panelIndex}`);
-    if (!targetPanel) return;
+function switchTab(tabIndex) {
+    // 1. Atualizar Botões do Menu Principal
+    const buttons = document.querySelectorAll('.tabs-nav .tab-btn');
+    buttons.forEach((btn, index) => {
+        if (index === tabIndex) {
+            btn.classList.add('active');
+            // Auto scroll do menu horizontal no celular
+            btn.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+        } else {
+            btn.classList.remove('active');
+        }
+    });
 
-    const subButtons = targetPanel.querySelectorAll('.sub-tabs-nav .sub-tab-btn');
-    const subContents = targetPanel.querySelectorAll('.sub-panel-content');
-    
-    subButtons.forEach(btn => btn.classList.remove('active'));
-    subContents.forEach(content => content.classList.remove('active'));
-    
-    if(subButtons[subIndex]) subButtons[subIndex].classList.add('active');
-    if(subContents[subIndex]) subContents[subIndex].classList.add('active');
+    // 2. Atualizar Painéis de Conteúdo Principal
+    const panels = document.querySelectorAll('.content-container .tab-panel');
+    panels.forEach((panel, index) => {
+        if (index === tabIndex) {
+            panel.classList.add('active');
+        } else {
+            panel.classList.remove('active');
+        }
+    });
+
+    // 3. Atualizar Imagens de Fundo
+    const bgImages = document.querySelectorAll('.bg-container .bg-image');
+    bgImages.forEach((img, index) => {
+        if (index === tabIndex) {
+            img.classList.add('active');
+        } else {
+            img.classList.remove('active');
+        }
+    });
 }
 
-// Lógica das Abas Principais
-function switchTab(index) {
-    buttons.forEach(btn => btn.classList.remove('active'));
-    buttons[index].classList.add('active');
+function switchSubTab(panelIndex, subTabIndex) {
+    const panel = document.getElementById(`panel-${panelIndex}`);
+    if (!panel) return;
 
-    panels.forEach(panel => panel.classList.remove('active'));
-    panels[index].classList.add('active');
+    // 1. Atualizar Botões das Sub-abas internas do painel ativo
+    const subButtons = panel.querySelectorAll('.sub-tabs-nav .sub-tab-btn');
+    subButtons.forEach((btn, index) => {
+        if (index === subTabIndex) {
+            btn.classList.add('active');
+            btn.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+        } else {
+            btn.classList.remove('active');
+        }
+    });
 
-    backgrounds.forEach(bg => bg.classList.remove('active'));
-    if(backgrounds[index]) {
-        backgrounds[index].classList.add('active');
-    }
-
-    const btn = buttons[index];
-    const navWidth = tabsNav.clientWidth;
-    const btnLeft = btn.offsetLeft;
-    const btnWidth = btn.clientWidth;
-    tabsNav.scrollLeft = btnLeft - (navWidth / 2) + (btnWidth / 2);
+    // 2. Atualizar blocos de conteúdo das sub-abas internas
+    const subContents = panel.querySelectorAll('.sub-panel-content');
+    subContents.forEach((content, index) => {
+        if (index === subTabIndex) {
+            content.classList.add('active');
+        } else {
+            content.classList.remove('active');
+        }
+    });
 }
 
 // Lógica de Integração com Prompt Horário do Check-out
