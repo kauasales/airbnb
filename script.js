@@ -1,115 +1,67 @@
-const buttons = document.querySelectorAll('.tabs-nav .tab-btn');
-const panels = document.querySelectorAll('.content-container .tab-panel');
-const backgrounds = document.querySelectorAll('.bg-container .bg-image');
-const tabsNav = document.getElementById('tabsNav');
-
+// ===== SWITCH TAB PRINCIPAL =====
 function switchTab(tabIndex) {
-    // 1. Atualizar Botões do Menu Principal
     const buttons = document.querySelectorAll('.tabs-nav .tab-btn');
-    buttons.forEach((btn, index) => {
-        if (index === tabIndex) {
-            btn.classList.add('active');
-            // Auto scroll do menu horizontal no celular
-            btn.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
-        } else {
-            btn.classList.remove('active');
-        }
-    });
-
-    // 2. Atualizar Painéis de Conteúdo Principal
     const panels = document.querySelectorAll('.content-container .tab-panel');
-    panels.forEach((panel, index) => {
-        if (index === tabIndex) {
-            panel.classList.add('active');
-        } else {
-            panel.classList.remove('active');
-        }
+    const bgImages = document.querySelectorAll('.bg-container .bg-image');
+
+    buttons.forEach((btn, i) => {
+        btn.classList.toggle('active', i === tabIndex);
+        if (i === tabIndex) btn.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
     });
 
-    // 3. Atualizar Imagens de Fundo
-    const bgImages = document.querySelectorAll('.bg-container .bg-image');
-    bgImages.forEach((img, index) => {
-        if (index === tabIndex) {
-            img.classList.add('active');
-        } else {
-            img.classList.remove('active');
-        }
+    panels.forEach((panel, i) => {
+        panel.classList.toggle('active', i === tabIndex);
+    });
+
+    bgImages.forEach((img, i) => {
+        img.classList.toggle('active', i === tabIndex);
     });
 }
 
-function switchSubTab(panelIndex, subTabIndex) {
+// ===== SWITCH SUB-TAB =====
+function switchSubTab(panelIndex, subIndex) {
     const panel = document.getElementById(`panel-${panelIndex}`);
     if (!panel) return;
 
-    // 1. Atualizar Botões das Sub-abas internas do painel ativo
-    const subButtons = panel.querySelectorAll('.sub-tabs-nav .sub-tab-btn');
-    subButtons.forEach((btn, index) => {
-        if (index === subTabIndex) {
-            btn.classList.add('active');
-            btn.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
-        } else {
-            btn.classList.remove('active');
-        }
-    });
-
-    // 2. Atualizar blocos de conteúdo das sub-abas internas
+    const subBtns = panel.querySelectorAll('.sub-tabs-nav .sub-tab-btn');
     const subContents = panel.querySelectorAll('.sub-panel-content');
-    subContents.forEach((content, index) => {
-        if (index === subTabIndex) {
-            content.classList.add('active');
-        } else {
-            content.classList.remove('active');
-        }
+
+    subBtns.forEach((btn, i) => {
+        btn.classList.toggle('active', i === subIndex);
+        if (i === subIndex) btn.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+    });
+
+    subContents.forEach((content, i) => {
+        content.classList.toggle('active', i === subIndex);
     });
 }
 
-// Lógica de Integração com Prompt Horário do Check-out
-const checkoutBtn = document.getElementById('checkoutBtn');
-if (checkoutBtn) {
-    checkoutBtn.addEventListener('click', function(e) {
-        e.preventDefault();
-        const horario = prompt("Que horas você pretende realizar o check-out? (Ex: 09:30)");
-        if (horario) {
-            const text = encodeURIComponent(`Olá! Estou passando para avisar que meu check-out está planejado para às ${horario}. 🔑`);
-            window.open(`https://wa.me/5592982308520?text=${text}`, '_blank');
-        }
-    });
-}
+// ===== CHECKOUT COM PROMPT =====
+document.getElementById('checkoutBtn')?.addEventListener('click', function(e) {
+    e.preventDefault();
+    const horario = prompt("Que horas você pretende fazer o check-out? (Ex: 09:30)");
+    if (horario) {
+        const msg = encodeURIComponent(`Olá! Meu check-out está planejado para às ${horario}. 🔑`);
+        window.open(`https://wa.me/5592982308520?text=${msg}`, '_blank');
+    }
+});
 
-// Lógica de Gestos Swipe (Arrastar para o lado) com bloqueio nas sub-abas
+// ===== SWIPE GESTURE =====
 let touchstartX = 0;
-let touchendX = 0;
 const container = document.querySelector('.content-container');
+const tabs = document.querySelectorAll('.tabs-nav .tab-btn');
 
-if (container) {
-    container.addEventListener('touchstart', e => {
-        // CORREÇÃO: Se o toque começou dentro de um menu de sub-abas, ignora o swipe principal
-        if (e.target.closest('.sub-tabs-nav')) {
-            touchstartX = 0;
-            return;
-        }
-        touchstartX = e.changedTouches[0].screenX;
-    }, {passive: true});
+container?.addEventListener('touchstart', e => {
+    if (e.target.closest('.sub-tabs-nav')) { touchstartX = 0; return; }
+    touchstartX = e.changedTouches[0].screenX;
+}, { passive: true });
 
-    container.addEventListener('touchend', e => {
-        // Se o touchstart foi resetado pelo bloqueio acima, não faz nada
-        if (touchstartX === 0) return;
-        
-        touchendX = e.changedTouches[0].screenX;
-        handleGesture();
-    }, {passive: true});
-}
+container?.addEventListener('touchend', e => {
+    if (touchstartX === 0) return;
+    const diff = touchstartX - e.changedTouches[0].screenX;
+    const activeIndex = Array.from(tabs).findIndex(btn => btn.classList.contains('active'));
 
-function handleGesture() {
-    let activeIndex = Array.from(buttons).findIndex(btn => btn.classList.contains('active'));
-    if (touchendX < touchstartX - 70) {
-        if (activeIndex < buttons.length - 1) {
-            switchTab(activeIndex + 1);
-        }
-    }
-    if (touchendX > touchstartX + 70) {
-        if (activeIndex > 0) {
-            switchTab(activeIndex - 1);
-        }
-    }
-}
+    if (diff > 60 && activeIndex < tabs.length - 1) switchTab(activeIndex + 1);
+    if (diff < -60 && activeIndex > 0) switchTab(activeIndex - 1);
+    touchstartX = 0;
+}, { passive: true });
