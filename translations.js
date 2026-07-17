@@ -17,7 +17,7 @@ const translations = {
         // Panel 0 - Check-in
         panel0Title: "Check-in",
         panel0AddrTitle: "Av. Ramos Ferreira, 1031",
-        panel0AddrDesc: "Bloco 18, Apto 12 · Centro, Manaus · CEP 69020-250",
+        panel0AddrDesc: "Bloco 18, Apto 4 · Centro, Manaus · CEP 69020-250",
         panel0Tag: "Parque Residencial Manaus",
         sub0_0: "Como chegar",
         sub0_1: "Informações",
@@ -163,7 +163,7 @@ const translations = {
         // Panel 0 - Check-in
         panel0Title: "Check in",
         panel0AddrTitle: "Av. Ramos Ferreira, 1031",
-        panel0AddrDesc: "Bloco 18, Apto 12 · Centro, Manaus · CEP 69020-250",
+        panel0AddrDesc: "Bloco 18, Apto 4 · Centro, Manaus · CEP 69020-250",
         panel0Tag: "Parque Residencial Manaus",
         sub0_0: "How to get there",
         sub0_1: "Information",
@@ -309,7 +309,7 @@ const translations = {
         // Panel 0 - Check-in
         panel0Title: "Check-in",
         panel0AddrTitle: "Av. Ramos Ferreira, 1031",
-        panel0AddrDesc: "Bloco 18, Apto 12 · Centro, Manaus · CEP 69020-250",
+        panel0AddrDesc: "Bloco 18, Apto 4 · Centro, Manaus · CEP 69020-250",
         panel0Tag: "Parque Residencial Manaus",
         sub0_0: "Cómo llegar",
         sub0_1: "Información",
