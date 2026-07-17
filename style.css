@@ -167,11 +167,12 @@ header p {
     display: none;
     flex-direction: column;
     gap: 12px;
-    height: 68vh;
+    height: fit-content;
 }
 
 .tab-panel.active {
     display: flex;
+        height: fit-content;
 }
 
 .sub-panel-content {
