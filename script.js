@@ -51,17 +51,25 @@ if (checkoutBtn) {
     });
 }
 
-// Lógica de Gestos Swipe (Arrastar para o lado)
+// Lógica de Gestos Swipe (Arrastar para o lado) com bloqueio nas sub-abas
 let touchstartX = 0;
 let touchendX = 0;
 const container = document.querySelector('.content-container');
 
 if (container) {
     container.addEventListener('touchstart', e => {
+        // CORREÇÃO: Se o toque começou dentro de um menu de sub-abas, ignora o swipe principal
+        if (e.target.closest('.sub-tabs-nav')) {
+            touchstartX = 0;
+            return;
+        }
         touchstartX = e.changedTouches[0].screenX;
     }, {passive: true});
 
     container.addEventListener('touchend', e => {
+        // Se o touchstart foi resetado pelo bloqueio acima, não faz nada
+        if (touchstartX === 0) return;
+        
         touchendX = e.changedTouches[0].screenX;
         handleGesture();
     }, {passive: true});

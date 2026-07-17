@@ -300,14 +300,14 @@ header p {
     justify-content: center;
     gap: 8px;
     width: 100%;
+    margin-top: 10px;
     background-color: var(--whatsapp-color);
     color: #ffffff;
     text-decoration: none;
     padding: 12px;
     border-radius: 12px;
     font-weight: 600;
-    font-size: 0.9rem;
-    margin-top: auto;
+    font-size: 0.9rem;;
 }
 
 .footer-hint {
