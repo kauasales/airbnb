@@ -24,19 +24,26 @@
 
     <!-- ===== HEADER ===== -->
     <header>
-        <h1>Airbnb do Salem</h1>
-        <p>Manaus — Guia Visual</p>
+        <div style="display: flex; justify-content: space-between; align-items: center; max-width: 600px; margin: 0 auto;">
+            <div style="text-align: left;">
+                <h1 id="headerTitle">Airbnb do Salem</h1>
+                <p id="headerSubtitle">Manaus — Guia Visual</p>
+            </div>
+            <button onclick="toggleLanguage()" id="langToggle" style="background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); color: #fff; padding: 8px 16px; border-radius: 30px; cursor: pointer; font-size: 0.8rem; font-weight: 600; transition: all 0.3s ease; backdrop-filter: blur(4px);">
+                <i class="fa-solid fa-globe"></i> <span id="langLabel">EN</span>
+            </button>
+        </div>
     </header>
 
     <!-- ===== MENU PRINCIPAL ===== -->
     <div class="tabs-nav" id="tabsNav">
-        <button class="tab-btn active" onclick="switchTab(0)"><i class="fa-solid fa-location-dot"></i> <span>Chegar</span></button>
-        <button class="tab-btn" onclick="switchTab(1)"><i class="fa-solid fa-house-chimney"></i> <span>Casa</span></button>
-        <button class="tab-btn" onclick="switchTab(2)"><i class="fa-solid fa-basket-shopping"></i> <span>Compras</span></button>
-        <button class="tab-btn" onclick="switchTab(3)"><i class="fa-solid fa-utensils"></i> <span>Comer</span></button>
-        <button class="tab-btn" onclick="switchTab(4)"><i class="fa-solid fa-camera-retro"></i> <span>Turismo</span></button>
-        <button class="tab-btn" onclick="switchTab(5)"><i class="fa-solid fa-heartbeat"></i> <span>Saúde</span></button>
-        <button class="tab-btn" onclick="switchTab(6)"><i class="fa-solid fa-key"></i> <span>Saída</span></button>
+        <button class="tab-btn active" onclick="switchTab(0)"><i class="fa-solid fa-location-dot"></i> <span id="menu0">Chegar</span></button>
+        <button class="tab-btn" onclick="switchTab(1)"><i class="fa-solid fa-house-chimney"></i> <span id="menu1">Casa</span></button>
+        <button class="tab-btn" onclick="switchTab(2)"><i class="fa-solid fa-basket-shopping"></i> <span id="menu2">Compras</span></button>
+        <button class="tab-btn" onclick="switchTab(3)"><i class="fa-solid fa-utensils"></i> <span id="menu3">Comer</span></button>
+        <button class="tab-btn" onclick="switchTab(4)"><i class="fa-solid fa-camera-retro"></i> <span id="menu4">Turismo</span></button>
+        <button class="tab-btn" onclick="switchTab(5)"><i class="fa-solid fa-heartbeat"></i> <span id="menu5">Saúde</span></button>
+        <button class="tab-btn" onclick="switchTab(6)"><i class="fa-solid fa-key"></i> <span id="menu6">Saída</span></button>
     </div>
 
     <!-- ===== CONTEÚDO ===== -->
@@ -46,14 +53,14 @@
         <div class="tab-panel active" id="panel-0">
             <div class="panel-header">
                 <div class="icon-wrap"><i class="fa-solid fa-map-location-dot"></i></div>
-                <div><h2>Como Chegar</h2></div>
+                <div><h2 id="panel0Title">Como Chegar</h2></div>
             </div>
             <div class="panel-body panel-scroll">
                 <div class="visual-card">
                     <span class="card-icon"><i class="fa-solid fa-location-dot"></i></span>
-                    <h4>Av. Ramos Ferreira, 1031</h4>
-                    <p>Bloco 18, Apto 12 · Centro, Manaus · CEP 69020-250</p>
-                    <span class="tag">Parque Residencial Manaus</span>
+                    <h4 id="panel0AddrTitle">Av. Ramos Ferreira, 1031</h4>
+                    <p id="panel0AddrDesc">Bloco 18, Apto 12 · Centro, Manaus · CEP 69020-250</p>
+                    <span class="tag" id="panel0Tag">Parque Residencial Manaus</span>
                 </div>
                 <div class="map-wrapper">
                     <iframe 
@@ -69,28 +76,28 @@
             </div>
         </div>
 
-        <!-- PAINEL 1: ACOMODAÇÃO (COM SUB-ABAS) -->
+        <!-- PAINEL 1: ACOMODAÇÃO -->
         <div class="tab-panel" id="panel-1">
             <div class="panel-header">
                 <div class="icon-wrap"><i class="fa-solid fa-house-user"></i></div>
-                <div><h2>Acomodação</h2></div>
+                <div><h2 id="panel1Title">Acomodação</h2></div>
             </div>
 
             <div class="sub-tabs-nav">
-                <button class="sub-tab-btn active" onclick="switchSubTab(1,0)"><i class="fa-solid fa-snowflake"></i> Clima</button>
-                <button class="sub-tab-btn" onclick="switchSubTab(1,1)"><i class="fa-solid fa-shirt"></i> Lavanderia</button>
-                <button class="sub-tab-btn" onclick="switchSubTab(1,2)"><i class="fa-solid fa-tree"></i> Pátio de trás</button>
-                <button class="sub-tab-btn" onclick="switchSubTab(1,3)"><i class="fa-solid fa-gift"></i> Mimos</button>
-                <button class="sub-tab-btn" onclick="switchSubTab(1,4)"><i class="fa-solid fa-leaf"></i> Plantas</button>
+                <button class="sub-tab-btn active" onclick="switchSubTab(1,0)"><i class="fa-solid fa-snowflake"></i> <span id="sub1_0">Clima</span></button>
+                <button class="sub-tab-btn" onclick="switchSubTab(1,1)"><i class="fa-solid fa-shirt"></i> <span id="sub1_1">Lavanderia</span></button>
+                <button class="sub-tab-btn" onclick="switchSubTab(1,2)"><i class="fa-solid fa-tree"></i> <span id="sub1_2">Pátio de trás</span></button>
+                <button class="sub-tab-btn" onclick="switchSubTab(1,3)"><i class="fa-solid fa-gift"></i> <span id="sub1_3">Mimos</span></button>
+                <button class="sub-tab-btn" onclick="switchSubTab(1,4)"><i class="fa-solid fa-leaf"></i> <span id="sub1_4">Plantas</span></button>
             </div>
 
             <!-- Sub: Clima -->
             <div class="sub-panel-content active">
                 <div class="visual-card">
                     <span class="card-icon"><i class="fa-solid fa-snowflake"></i></span>
-                    <h4>Ar-condicionado em todos os ambientes</h4>
-                    <p>Fique à vontade para ajustar a temperatura. Lembre-se de desligar ao sair para ajudar no consumo de energia.</p>
-                    <span class="tag">💡 Dica: desligue ao sair</span>
+                    <h4 id="climaTitle">Ar-condicionado em todos os ambientes</h4>
+                    <p id="climaDesc">Fique à vontade para ajustar a temperatura. Lembre-se de desligar ao sair para ajudar no consumo de energia.</p>
+                    <span class="tag" id="climaTag">💡 Dica: desligue ao sair</span>
                 </div>
             </div>
 
@@ -98,21 +105,21 @@
             <div class="sub-panel-content">
                 <div class="visual-card">
                     <span class="card-icon"><i class="fa-solid fa-shirt"></i></span>
-                    <h4>Lavanderia</h4>
-                    <p>Entregue e receba o cesto de roupas lavadas e sequinhas.</p>
-                    <span class="tag">Serviço gratuito</span>
-                    <span class="tag">Solicite com antencedência</span>
+                    <h4 id="lavanderiaTitle">Lavanderia</h4>
+                    <p id="lavanderiaDesc">Entregue e receba o cesto de roupas lavadas e sequinhas.</p>
+                    <span class="tag" id="lavanderiaTag1">Serviço gratuito</span>
+                    <span class="tag" id="lavanderiaTag2">Solicite com antencedência</span>
                 </div>
-                <a href="https://wa.me/5592982308520?text=Olá!%20Gostaria%20de%20solicitar%20a%20lavanderia%20🧺" target="_blank" class="btn-whatsapp"><i class="fa-brands fa-whatsapp"></i> Solicitar agora</a>
+                <a href="https://wa.me/5592982308520?text=Olá!%20Gostaria%20de%20solicitar%20a%20lavanderia%20🧺" target="_blank" class="btn-whatsapp" id="lavanderiaBtn"><i class="fa-brands fa-whatsapp"></i> <span>Solicitar agora</span></a>
             </div>
 
             <!-- Sub: Pátio -->
             <div class="sub-panel-content">
                 <div class="visual-card">
                     <span class="card-icon"><i class="fa-solid fa-tree"></i></span>
-                    <h4>Pátio de trás</h4>
-                    <p>Área restrita para cuidados com as plantas. A porta da cozinha permanece trancada.</p>
-                    <span class="tag">Acesso restrito</span>
+                    <h4 id="patioTitle">Pátio de trás</h4>
+                    <p id="patioDesc">Área restrita para cuidados com as plantas. A porta da cozinha permanece trancada.</p>
+                    <span class="tag" id="patioTag">Acesso restrito</span>
                 </div>
             </div>
 
@@ -120,47 +127,42 @@
             <div class="sub-panel-content">
                 <div class="visual-card">
                     <span class="card-icon"><i class="fa-solid fa-gift"></i></span>
-                    <h4>Kit de boas-vindas</h4>
-                    <p>Toalhas, amenidades, café, açúcar, sal e óleo. Tudo para começar bem.</p>
-                    <span class="tag">Cortesia de entrada</span>
+                    <h4 id="mimosTitle">Kit de boas-vindas</h4>
+                    <p id="mimosDesc">Toalhas, amenidades, café, açúcar, sal e óleo. Tudo para começar bem.</p>
+                    <span class="tag" id="mimosTag">Cortesia de entrada</span>
                 </div>
-                <div class="highlight-badge"><strong>Obs:</strong> Não fazemos reposições extras durante a estadia.</div>
+                <div class="highlight-badge" id="mimosObs"><strong>Obs:</strong> Não fazemos reposições extras durante a estadia.</div>
             </div>
 
             <!-- Sub: Plantas -->
             <div class="sub-panel-content">
                 <div class="visual-card">
                     <span class="card-icon"><i class="fa-solid fa-leaf"></i></span>
-                    <h4>Cuide das plantinhas</h4>
-                    <p>Deixamos borrifadores no pátio da frente e dentro de casa. Ajude a mantê-las hidratadas! 🌿</p>
+                    <h4 id="plantasTitle">Cuide das plantinhas</h4>
+                    <p id="plantasDesc">Deixamos borrifadores no pátio da frente e dentro de casa. Ajude a mantê-las hidratadas! 🌿</p>
                 </div>
             </div>
-
         </div>
 
         <!-- PAINEL 2: MERCADOS -->
         <div class="tab-panel" id="panel-2">
             <div class="panel-header">
                 <div class="icon-wrap"><i class="fa-solid fa-basket-shopping"></i></div>
-                <div><h2>Mercados</h2></div>
+                <div><h2 id="panel2Title">Mercados</h2></div>
             </div>
 
             <div class="panel-body panel-scroll">
                 <div class="visual-card">
                     <span class="card-icon"><i class="fa-solid fa-store"></i></span>
-                    <h4>Supermercado Veneza</h4>
-                    <p>Produtos variados e de boa qualidade. Próximo a acomodação.</p>
-                    <a href="https://maps.google.com/?q=Av.+Joaquim+Nabuco,+2167+-+Centro,+Manaus+-+AM,+69020-031" target="_blank" class="map-link-card">
-                        <i class="fa-solid fa-location-dot"></i> Ver no mapa
-                    </a>                
+                    <h4 id="mercado1Title">Supermercado Veneza</h4>
+                    <p id="mercado1Desc">Produtos variados e de boa qualidade. Próximo a acomodação.</p>
+                    <a href="https://maps.google.com/?q=Av.+Joaquim+Nabuco,+2167+-+Centro,+Manaus+-+AM,+69020-031" target="_blank" class="map-link-card" id="mercado1Map"><i class="fa-solid fa-location-dot"></i> Ver no mapa</a>                
                 </div>
                 <div class="visual-card">
                     <span class="card-icon"><i class="fa-solid fa-store-alt"></i></span>
-                    <h4>Supermercados DB</h4>
-                    <p>Ampla variedade de marcas e produtos. A melhor opção para compras completas.</p>
-                    <a href="https://maps.google.com/?q=Avenida+Eduardo+Ribeiro,+453,+Manaus,+Amazonas,+69010-001" target="_blank" class="map-link-card">
-                        <i class="fa-solid fa-location-dot"></i> Ver no mapa
-                    </a>
+                    <h4 id="mercado2Title">Supermercados DB</h4>
+                    <p id="mercado2Desc">Ampla variedade de marcas e produtos. A melhor opção para compras completas.</p>
+                    <a href="https://maps.google.com/?q=Avenida+Eduardo+Ribeiro,+453,+Manaus,+Amazonas,+69010-001" target="_blank" class="map-link-card" id="mercado2Map"><i class="fa-solid fa-location-dot"></i> Ver no mapa</a>
                 </div>
             </div>
         </div>
@@ -169,28 +171,26 @@
         <div class="tab-panel" id="panel-3">
             <div class="panel-header">
                 <div class="icon-wrap"><i class="fa-solid fa-utensils"></i></div>
-                <div><h2>Restaurantes</h2></div>
+                <div><h2 id="panel3Title">Restaurantes</h2></div>
             </div>
             <div class="panel-body panel-scroll">
                 <div class="visual-card">
                     <span class="card-icon"><i class="fa-solid fa-fish"></i></span>
-                    <h4>Taboa Peixaria</h4>
-                    <p>Peixaria com vista para o Rio Negro.</p>
-                    <a href="https://maps.google.com/?q=R.+Profa.+Em%C3%ADlia+Cavalcante,+49+-+Compensa,+Manaus+-+AM,+69036-720" target="_blank" class="map-link-card">
-                        <i class="fa-solid fa-location-dot"></i> Ver no mapa
-                    </a>                
+                    <h4 id="rest1Title">Taboa Peixaria</h4>
+                    <p id="rest1Desc">Peixaria com vista para o Rio Negro.</p>
+                    <a href="https://maps.google.com/?q=R.+Profa.+Em%C3%ADlia+Cavalcante,+49+-+Compensa,+Manaus+-+AM,+69036-720" target="_blank" class="map-link-card" id="rest1Map"><i class="fa-solid fa-location-dot"></i> Ver no mapa</a>                
                 </div>
                 <div class="visual-card">
                     <span class="card-icon"><i class="fa-solid fa-fish-fins"></i></span>
-                    <h4>Tambaqui de Banda</h4>
-                    <p>Peixes amazônicos assados na brasa. Ao lado do Teatro Amazonas.</p>
-                    <a href="https://maps.google.com/?q=Tambaqui+de+Banda+Rua+Jose+Clemente+Centro+Manaus" target="_blank" class="map-link-card"><i class="fa-solid fa-location-dot"></i> Ver no mapa</a>
+                    <h4 id="rest2Title">Tambaqui de Banda</h4>
+                    <p id="rest2Desc">Peixes amazônicos assados na brasa. Ao lado do Teatro Amazonas.</p>
+                    <a href="https://maps.google.com/?q=Tambaqui+de+Banda+Rua+Jose+Clemente+Centro+Manaus" target="_blank" class="map-link-card" id="rest2Map"><i class="fa-solid fa-location-dot"></i> Ver no mapa</a>
                 </div>
                 <div class="visual-card">
                     <span class="card-icon"><i class="fa-solid fa-mug-hot"></i></span>
-                    <h4>Coreto Manaós</h4>
-                    <p>Café da manhã regional com x-caboquinho e almoço caseiro.</p>
-                    <a href="https://maps.google.com/?q=Coreto+Manaos+Cafe+Almoco+Regional+Manaus" target="_blank" class="map-link-card"><i class="fa-solid fa-location-dot"></i> Ver no mapa</a>
+                    <h4 id="rest3Title">Coreto Manaós</h4>
+                    <p id="rest3Desc">Café da manhã regional com x-caboquinho e almoço caseiro.</p>
+                    <a href="https://maps.google.com/?q=Coreto+Manaos+Cafe+Almoco+Regional+Manaus" target="_blank" class="map-link-card" id="rest3Map"><i class="fa-solid fa-location-dot"></i> Ver no mapa</a>
                 </div>
             </div>
         </div>
@@ -199,96 +199,92 @@
         <div class="tab-panel" id="panel-4">
             <div class="panel-header">
                 <div class="icon-wrap"><i class="fa-solid fa-camera-retro"></i></div>
-                <div><h2>Pontos Turísticos</h2></div>
+                <div><h2 id="panel4Title">Pontos Turísticos</h2></div>
             </div>
             <div class="panel-body panel-scroll">
                 <div class="visual-card">
                     <span class="card-icon"><i class="fa-solid fa-theater-masks"></i></span>
-                    <h4>Teatro Amazonas</h4>
-                    <p>Cartão-postal de Manaus. Arquitetura suntuosa da época da borracha.</p>
-                    <a href="https://maps.google.com/?q=Teatro+Amazonas+Largo+de+Sao+Sebastiao+Manaus" target="_blank" class="map-link-card"><i class="fa-solid fa-location-dot"></i> Ver no mapa</a>
+                    <h4 id="tur1Title">Teatro Amazonas</h4>
+                    <p id="tur1Desc">Cartão-postal de Manaus. Arquitetura suntuosa da época da borracha.</p>
+                    <a href="https://maps.google.com/?q=Teatro+Amazonas+Largo+de+Sao+Sebastiao+Manaus" target="_blank" class="map-link-card" id="tur1Map"><i class="fa-solid fa-location-dot"></i> Ver no mapa</a>
                 </div>
 
                 <div class="visual-card">
                     <span class="card-icon"><i class="fa-solid fa-landmark"></i></span>
-                    <h4>Palácio Rio Negro</h4>
-                    <p>Centro cultural com arquitetura imponente e belos jardins.</p>
-                    <a href="https://maps.google.com/?q=Palacio+Rio+Negro+Av+Sete+de+Setembro+Manaus" target="_blank" class="map-link-card"><i class="fa-solid fa-location-dot"></i> Ver no mapa</a>
+                    <h4 id="tur2Title">Palácio Rio Negro</h4>
+                    <p id="tur2Desc">Centro cultural com arquitetura imponente e belos jardins.</p>
+                    <a href="https://maps.google.com/?q=Palacio+Rio+Negro+Av+Sete+de+Setembro+Manaus" target="_blank" class="map-link-card" id="tur2Map"><i class="fa-solid fa-location-dot"></i> Ver no mapa</a>
                 </div>
 
                 <div class="visual-card">
                     <span class="card-icon"><i class="fa-solid fa-warehouse"></i></span>
-                    <h4>Mercado Municipal Adolpho Lisboa</h4>
-                    <p>Estrutura de ferro fundido importada da Europa. Artesanato regional.</p>
-                    <a href="https://maps.google.com/?q=R.+dos+Bar%C3%A9s,+46+-+Centro,+Manaus+-+AM,+69009-365" target="_blank" class="map-link-card">
-                        <i class="fa-solid fa-location-dot"></i> Ver no mapa
-                    </a>
+                    <h4 id="tur3Title">Mercado Municipal Adolpho Lisboa</h4>
+                    <p id="tur3Desc">Estrutura de ferro fundido importada da Europa. Artesanato regional.</p>
+                    <a href="https://maps.google.com/?q=R.+dos+Bar%C3%A9s,+46+-+Centro,+Manaus+-+AM,+69009-365" target="_blank" class="map-link-card" id="tur3Map"><i class="fa-solid fa-location-dot"></i> Ver no mapa</a>
                 </div>
 
                 <div class="visual-card">
                     <span class="card-icon"><i class="fa-solid fa-tree"></i></span>
-                    <h4>MUSA - Museu da Amazônia</h4>
-                    <p>Av. Margarita, 6305 - Cidade de Deus, Manaus - AM, 69099-415</p>
-                    <a href="https://maps.google.com/?q=Av.+Margarita,+6305+-+Cidade+de+Deus,+Manaus+-+AM,+69099-415" target="_blank" class="map-link-card"><i class="fa-solid fa-location-dot"></i> Ver no mapa</a>
+                    <h4 id="tur4Title">MUSA - Museu da Amazônia</h4>
+                    <p id="tur4Desc">Av. Margarita, 6305 - Cidade de Deus, Manaus - AM, 69099-415</p>
+                    <a href="https://maps.google.com/?q=Av.+Margarita,+6305+-+Cidade+de+Deus,+Manaus+-+AM,+69099-415" target="_blank" class="map-link-card" id="tur4Map"><i class="fa-solid fa-location-dot"></i> Ver no mapa</a>
                 </div>
 
                 <div class="visual-card">
                     <span class="card-icon"><i class="fa-solid fa-gavel"></i></span>
-                    <h4>Palácio da Justiça</h4>
-                    <p>Av. Eduardo Ribeiro, 901 - Centro, Manaus - AM, 69400-901</p>
-                    <a href="https://maps.google.com/?q=Av.+Eduardo+Ribeiro,+901+-+Centro,+Manaus+-+AM,+69400-901" target="_blank" class="map-link-card"><i class="fa-solid fa-location-dot"></i> Ver no mapa</a>
+                    <h4 id="tur5Title">Palácio da Justiça</h4>
+                    <p id="tur5Desc">Av. Eduardo Ribeiro, 901 - Centro, Manaus - AM, 69400-901</p>
+                    <a href="https://maps.google.com/?q=Av.+Eduardo+Ribeiro,+901+-+Centro,+Manaus+-+AM,+69400-901" target="_blank" class="map-link-card" id="tur5Map"><i class="fa-solid fa-location-dot"></i> Ver no mapa</a>
                 </div>
 
                 <div class="visual-card">
                     <span class="card-icon"><i class="fa-solid fa-eye"></i></span>
-                    <h4>Mirante Lúcia Almeida</h4>
-                    <p>Av. Sete de Setembro, 8 - Centro, Manaus - AM, 69005-140</p>
-                    <a href="https://maps.google.com/?q=Av.+Sete+de+Setembro,+8+-+Centro,+Manaus+-+AM,+69005-140" target="_blank" class="map-link-card"><i class="fa-solid fa-location-dot"></i> Ver no mapa</a>
+                    <h4 id="tur6Title">Mirante Lúcia Almeida</h4>
+                    <p id="tur6Desc">Av. Sete de Setembro, 8 - Centro, Manaus - AM, 69005-140</p>
+                    <a href="https://maps.google.com/?q=Av.+Sete+de+Setembro,+8+-+Centro,+Manaus+-+AM,+69005-140" target="_blank" class="map-link-card" id="tur6Map"><i class="fa-solid fa-location-dot"></i> Ver no mapa</a>
                 </div>
 
                 <div class="visual-card">
                     <span class="card-icon"><i class="fa-solid fa-flask"></i></span>
-                    <h4>INPA - Instituto Nacional de Pesquisas da Amazônia</h4>
-                    <p>Av. André Araújo, 2936 - Petrópolis, Manaus - AM, 69067-375</p>
-                    <a href="https://maps.google.com/?q=Av.+Andr%C3%A9+Ara%C3%BAjo,+2936+-+Petr%C3%B3polis,+Manaus+-+AM,+69067-375" target="_blank" class="map-link-card"><i class="fa-solid fa-location-dot"></i> Ver no mapa</a>
+                    <h4 id="tur7Title">INPA - Instituto Nacional de Pesquisas da Amazônia</h4>
+                    <p id="tur7Desc">Av. André Araújo, 2936 - Petrópolis, Manaus - AM, 69067-375</p>
+                    <a href="https://maps.google.com/?q=Av.+Andr%C3%A9+Ara%C3%BAjo,+2936+-+Petr%C3%B3polis,+Manaus+-+AM,+69067-375" target="_blank" class="map-link-card" id="tur7Map"><i class="fa-solid fa-location-dot"></i> Ver no mapa</a>
                 </div>
 
                 <div class="visual-card">
                     <span class="card-icon"><i class="fa-solid fa-bag-shopping"></i></span>
-                    <h4>Manauara Shopping</h4>
-                    <p>Av. Mário Ypiranga, 1300 - Adrianópolis, Manaus - AM, 69053-165</p>
-                    <a href="https://maps.google.com/?q=Av.+M%C3%A1rio+Ypiranga,+1300+-+Adrian%C3%B3polis,+Manaus+-+AM,+69053-165" target="_blank" class="map-link-card"><i class="fa-solid fa-location-dot"></i> Ver no mapa</a>
+                    <h4 id="tur8Title">Manauara Shopping</h4>
+                    <p id="tur8Desc">Av. Mário Ypiranga, 1300 - Adrianópolis, Manaus - AM, 69053-165</p>
+                    <a href="https://maps.google.com/?q=Av.+M%C3%A1rio+Ypiranga,+1300+-+Adrian%C3%B3polis,+Manaus+-+AM,+69053-165" target="_blank" class="map-link-card" id="tur8Map"><i class="fa-solid fa-location-dot"></i> Ver no mapa</a>
                 </div>
             </div>
         </div>
 
-        <!-- PAINEL 5: SAÚDE (FARMÁCIAS) -->
+        <!-- PAINEL 5: SAÚDE -->
         <div class="tab-panel" id="panel-5">
             <div class="panel-header">
                 <div class="icon-wrap"><i class="fa-solid fa-heartbeat"></i></div>
-                <div><h2>Saúde</h2></div>
+                <div><h2 id="panel5Title">Saúde</h2></div>
             </div>
             <div class="panel-body panel-scroll">
                 <div class="visual-card">
                     <span class="card-icon"><i class="fa-solid fa-pills"></i></span>
-                    <h4>Santo Remédio</h4>
-                    <p>Atendimento 24h. Ideal para emergências noturnas.</p>
-                    <a href="https://maps.google.com/?q=Drogaria+Santo+Remedio+Av+Joaquim+Nabuco+1841+Centro+Manaus" target="_blank" class="map-link-card"><i class="fa-solid fa-location-dot"></i> Ver no mapa</a>
+                    <h4 id="saude1Title">Santo Remédio</h4>
+                    <p id="saude1Desc">Atendimento 24h. Ideal para emergências noturnas.</p>
+                    <a href="https://maps.google.com/?q=Drogaria+Santo+Remedio+Av+Joaquim+Nabuco+1841+Centro+Manaus" target="_blank" class="map-link-card" id="saude1Map"><i class="fa-solid fa-location-dot"></i> Ver no mapa</a>
                 </div>
                 <div class="visual-card">
                     <span class="card-icon"><i class="fa-solid fa-kit-medical"></i></span>
-                    <h4>Pague Menos</h4>
-                    <p>Farmácia bem localizada, com ótima variedade de higiene e cosméticos.</p>
-                    <a href="https://maps.google.com/?q=Farmacia+Pague+Menos+Av+Joaquim+Nabuco+2305+Centro+Manaus" target="_blank" class="map-link-card"><i class="fa-solid fa-location-dot"></i> Ver no mapa</a>
+                    <h4 id="saude2Title">Pague Menos</h4>
+                    <p id="saude2Desc">Farmácia bem localizada, com ótima variedade de higiene e cosméticos.</p>
+                    <a href="https://maps.google.com/?q=Farmacia+Pague+Menos+Av+Joaquim+Nabuco+2305+Centro+Manaus" target="_blank" class="map-link-card" id="saude2Map"><i class="fa-solid fa-location-dot"></i> Ver no mapa</a>
                 </div>
 
                 <div class="visual-card">
                     <span class="card-icon"><i class="fa-solid fa-hospital"></i></span>
-                    <h4>UBS - Unidade Básica de Saúde</h4>
-                    <p>Posto de saúde, pronto atendimento.</p>
-                    <a href="https://maps.google.com/?q=Pra%C3%A7a+Ismael+Ben%C3%ADgno,+155+-+S%C3%A3o+Raimundo,+Manaus+-+AM,+69027-320" target="_blank" class="map-link-card">
-                        <i class="fa-solid fa-location-dot"></i> Ver no mapa
-                    </a>
+                    <h4 id="saude3Title">UBS - Unidade Básica de Saúde</h4>
+                    <p id="saude3Desc">Posto de saúde, pronto atendimento.</p>
+                    <a href="https://maps.google.com/?q=Pra%C3%A7a+Ismael+Ben%C3%ADgno,+155+-+S%C3%A3o+Raimundo,+Manaus+-+AM,+69027-320" target="_blank" class="map-link-card" id="saude3Map"><i class="fa-solid fa-location-dot"></i> Ver no mapa</a>
                 </div>
             </div>
         </div>
@@ -297,15 +293,15 @@
         <div class="tab-panel" id="panel-6">
             <div class="panel-header">
                 <div class="icon-wrap"><i class="fa-solid fa-key"></i></div>
-                <div><h2>Check-out</h2></div>
+                <div><h2 id="panel6Title">Check-out</h2></div>
             </div>
             <div class="panel-body">
                 <div class="visual-card">
                     <span class="card-icon"><i class="fa-solid fa-clock"></i></span>
-                    <h4>Saída até 11:00h</h4>
-                    <p>Avise seu horário.</p>
+                    <h4 id="checkoutTitle">Saída até 11:00h</h4>
+                    <p id="checkoutDesc">Avise seu horário.</p>
                 </div>
-                <a href="#" id="checkoutBtn" class="btn-whatsapp" style="width:100%; justify-content:center;"><i class="fa-brands fa-whatsapp"></i> Avisar horário de saída</a>
+                <a href="#" id="checkoutBtn" class="btn-whatsapp" style="width:100%; justify-content:center;" id="checkoutBtnText"><i class="fa-brands fa-whatsapp"></i> <span id="checkoutBtnLabel">Avisar horário de saída</span></a>
             </div>
         </div>
 
@@ -313,7 +309,7 @@
 
     <!-- ===== FOOTER HINT ===== -->
     <div class="footer-hint">
-        <i class="fa-solid fa-angles-left"></i> Deslize para navegar <i class="fa-solid fa-angles-right"></i>
+        <i class="fa-solid fa-angles-left"></i> <span id="footerHint">Deslize para navegar</span> <i class="fa-solid fa-angles-right"></i>
     </div>
 
     <script src="script.js"></script>
