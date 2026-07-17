@@ -3,7 +3,6 @@ const translations = {
     pt: {
         // Header
         headerTitle: "Airbnb do Salem",
-        headerSubtitle: "Manaus — Guia Visual",
         langToggle: "EN",
         
         // Menu Principal
@@ -150,7 +149,6 @@ const translations = {
     en: {
         // Header
         headerTitle: "Salem's Airbnb",
-        headerSubtitle: "Manaus — Visual Guide",
         langToggle: "ES",
         
         // Menu Principal
@@ -297,7 +295,6 @@ const translations = {
     es: {
         // Header
         headerTitle: "Airbnb de Salem",
-        headerSubtitle: "Manaus — Guía Visual",
         langToggle: "PT",
         
         // Menu Principal

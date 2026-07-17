@@ -8,7 +8,6 @@ function applyTranslations(lang) {
     
     // Header
     document.getElementById('headerTitle').textContent = t.headerTitle;
-    document.getElementById('headerSubtitle').textContent = t.headerSubtitle;
     document.getElementById('langLabel').textContent = t.langToggle;
     
     // Menu Principal
