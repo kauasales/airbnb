@@ -13,14 +13,13 @@
 </head>
 <body>
 
-    <!-- Imagens de Fundo Dinâmicas -->
+    <!-- Imagens de Fundo Dinâmicas (Uma para cada aba principal) -->
     <div class="bg-container">
-        <div class="bg-image active" style="background-image: url('https://encrypted-tbn0.gstatic.com/licensed-image?q=tbn:ANd9GcT9-HeEE63U2yNnRYEOu89Tv9Py75qo46TaLWtLASqB0UhZ5RUBnUZY1bv6PCU4kpEk5YT5n07l_s3Xtkw');"></div> <!-- Ar Condicionado -->
-        <div class="bg-image" style="background-image: url('https://encrypted-tbn0.gstatic.com/licensed-image?q=tbn:ANd9GcSTRlAWVWmi7sdtc_30HpG23RZuKp3j3cx9cacZsRw9t6-txIjuGcyiuQwIfMsFv5oVWcRtk_lNPpUs9JE');"></div> <!-- Plantas -->
-        <div class="bg-image" style="background-image: url('https://encrypted-tbn2.gstatic.com/licensed-image?q=tbn:ANd9GcQ2FwmiXjmzCPrcj2hD4mkLrE8sI5cZ4PsvPbkvGgJ1_dlZC3LABSEZZGGz9t3UBPO6CYFbmjdwZcxOiy8');"></div> <!-- Amenities -->
-        <div class="bg-image" style="background-image: url('https://encrypted-tbn1.gstatic.com/licensed-image?q=tbn:ANd9GcSMkE1ki8cCYlu0XEFNFGWNqQg8L4Yhdnpn8SaHvY9cw4S4EHhz6ICX5tnkdOAyfbs6KUSbnPejy5sP9jc');"></div> <!-- Filtro de Água -->
-        <div class="bg-image" style="background-image: url('https://encrypted-tbn0.gstatic.com/licensed-image?q=tbn:ANd9GcQpimt1gnnFLE73hFnJIAJksrhfOjro7ptGY_i38-aKUAz-PKFdp8jaODOgB2mRe6yp2R1CZP1shM6Sm3Q');"></div> <!-- Lavanderia -->
-        <div class="bg-image" style="background-image: url('https://encrypted-tbn1.gstatic.com/licensed-image?q=tbn:ANd9GcTc-JSqNoWW_MkNnC8MOSz71O91W2cpWDcap8rwp3Pbw7inv1tbRRruoN43Wabc2G9TX6tskyQwA6UFM_M');"></div> <!-- Acesso -->
+        <div class="bg-image active" style="background-image: url('https://encrypted-tbn0.gstatic.com/licensed-image?q=tbn:ANd9GcT9-HeEE63U2yNnRYEOu89Tv9Py75qo46TaLWtLASqB0UhZ5RUBnUZY1bv6PCU4kpEk5YT5n07l_s3Xtkw');"></div> <!-- Acomodação -->
+        <div class="bg-image" style="background-image: url('https://images.unsplash.com/photo-1524661135-423995f22d0b?auto=format&fit=crop&w=1200&q=80');"></div> <!-- Como Chegar -->
+        <div class="bg-image" style="background-image: url('https://images.unsplash.com/photo-1604719312566-8912e9227c6a?auto=format&fit=crop&w=1200&q=80');"></div> <!-- Mercados & Farmácias -->
+        <div class="bg-image" style="background-image: url('https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=1200&q=80');"></div> <!-- Restaurantes -->
+        <div class="bg-image" style="background-image: url('https://images.unsplash.com/photo-1605135252890-8438237ba579?auto=format&fit=crop&w=1200&q=80');"></div> <!-- Pontos Turísticos -->
         <div class="bg-image" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLNoOXAb8VIQ4Jni7TNFhlNZpjdIyvbD15X8FMM0wt6YZ0ASfWpcxSGsA&s=10');"></div> <!-- Check out -->
     </div>
     <div class="bg-overlay"></div>
@@ -28,123 +27,235 @@
     <!-- Cabeçalho de Boas-Vindas -->
     <header>
         <h1>Bem-vindo à sua Estadia</h1>
-        <p>Recomendações importantes para o seu conforto</p>
+        <p>Seu guia interativo em Manaus</p>
     </header>
 
-    <!-- Menu de Abas Deslizante Horizontal -->
+    <!-- Menu de Abas Principal -->
     <div class="tabs-nav" id="tabsNav">
-        <button class="tab-btn active" onclick="switchTab(0)"><i class="fa-solid fa-snowflake"></i> Ar Condicionado</button>
-        <button class="tab-btn" onclick="switchTab(1)"><i class="fa-solid fa-leaf"></i> Plantas</button>
-        <button class="tab-btn" onclick="switchTab(2)"><i class="fa-solid fa-pump-soap"></i> Amenities</button>
-        <button class="tab-btn" onclick="switchTab(3)"><i class="fa-solid fa-faucet-drip"></i> Água</button>
-        <button class="tab-btn" onclick="switchTab(4)"><i class="fa-solid fa-shirt"></i> Lavanderia</button>
-        <button class="tab-btn" onclick="switchTab(5)"><i class="fa-solid fa-door-closed"></i> Pátio Traseiro</button>
-        <button class="tab-btn" onclick="switchTab(6)"><i class="fa-solid fa-key"></i> Check-out</button>
+        <button class="tab-btn active" onclick="switchTab(0)"><i class="fa-solid fa-house-chimney"></i> Acomodação</button>
+        <button class="tab-btn" onclick="switchTab(1)"><i class="fa-solid fa-map-location-dot"></i> Como Chegar</button>
+        <button class="tab-btn" onclick="switchTab(2)"><i class="fa-solid fa-basket-shopping"></i> Mercados & Farmácias</button>
+        <button class="tab-btn" onclick="switchTab(3)"><i class="fa-solid fa-utensils"></i> Restaurantes</button>
+        <button class="tab-btn" onclick="switchTab(4)"><i class="fa-solid fa-camera-retro"></i> Pontos Turísticos</button>
+        <button class="tab-btn" onclick="switchTab(5)"><i class="fa-solid fa-key"></i> Check-out</button>
     </div>
 
     <!-- Container dos Cards Interativos -->
     <div class="content-container">
         
-        <!-- Painel 1: Ar Condicionado -->
-        <div class="tab-panel active">
+        <!-- Painel 1: Hospedagem / Acomodação com Sub-abas -->
+        <div class="tab-panel active" id="panel-0">
             <div class="panel-header">
-                <div class="icon-wrap"><i class="fa-solid fa-snowflake"></i></div>
-                <h2>Ar Condicionado</h2>
+                <div class="icon-wrap"><i class="fa-solid fa-house-user"></i></div>
+                <div>
+                    <h2>Acomodação</h2>
+                    <p style="font-size: 0.75rem; color: var(--primary);">Selecione um item para ver os detalhes</p>
+                </div>
             </div>
-            <div class="panel-body">
+            
+            <div class="sub-tabs-nav">
+                <button class="sub-tab-btn active" onclick="switchSubTab(0, 0)"><i class="fa-solid fa-snowflake"></i> Clima</button>
+                <button class="sub-tab-btn" onclick="switchSubTab(0, 1)"><i class="fa-solid fa-leaf"></i> Plantas</button>
+                <button class="sub-tab-btn" onclick="switchSubTab(0, 2)"><i class="fa-solid fa-pump-soap"></i> Mimos</button>
+                <button class="sub-tab-btn" onclick="switchSubTab(0, 3)"><i class="fa-solid fa-faucet-drip"></i> Água</button>
+                <button class="sub-tab-btn" onclick="switchSubTab(0, 4)"><i class="fa-solid fa-shirt"></i> Roupas</button>
+                <button class="sub-tab-btn" onclick="switchSubTab(0, 5)"><i class="fa-solid fa-door-closed"></i> Pátio</button>
+            </div>
+
+            <div class="sub-panel-content active">
                 <p>Possuímos ar-condicionado em todos os ambientes para que sua estadia seja o mais agradável possível.</p>
                 <div class="highlight-box">
                     <strong>Atenção:</strong> Para amenizar o alto custo de energia elétrica em Manaus, por gentileza, <strong>desligue os aparelhos</strong> ao deixar a acomodação.
                 </div>
             </div>
-        </div>
-
-        <!-- Painel 2: Plantas -->
-        <div class="tab-panel">
-            <div class="panel-header">
-                <div class="icon-wrap"><i class="fa-solid fa-leaf"></i></div>
-                <h2>Cuidado e Amor</h2>
-            </div>
-            <div class="panel-body">
+            <div class="sub-panel-content">
                 <p>Amamos profundamente as plantas e os animais por aqui! 🌿🐶</p>
-                <p style="margin-top: 10px;">Deixamos um <strong>borrifador no pátio externo</strong> e outro <strong>dentro da casa</strong>. Sinta-se à vontade para nos ajudar a mantê-las hidratadas e felizes!</p>
+                <p style="margin-top: 10px;">Deixamos um <strong>borrifador no pátio externo</strong> e outro <strong>dentro da casa</strong>. Sinta-se à vontade para nos ajudar a mantê-las hidratadas!</p>
             </div>
-        </div>
-
-        <!-- Painel 3: Amenities -->
-        <div class="tab-panel">
-            <div class="panel-header">
-                <div class="icon-wrap"><i class="fa-solid fa-pump-soap"></i></div>
-                <h2>Amenities e Mimos</h2>
-            </div>
-            <div class="panel-body">
-                <p>Preparamos tudo com carinho. Você encontrará toalhas limpas e amenites de banho na sua chegada.</p>
-                <p style="margin-top: 10px;">Também disponibilizamos uma base de cozinha: <strong>café, açúcar, sal e óleo de cozinha</strong>.</p>
+            <div class="sub-panel-content">
+                <p>Preparamos tudo com carinho. Você encontrará toalhas limpas e amenities de banho na sua chegada.</p>
+                <p style="margin-top: 10px;">Disponibilizamos uma base de cozinha de cortesia: <strong>café, açúcar, sal e óleo</strong>.</p>
                 <div class="highlight-box">
-                    Nota: O kit é cortesia de entrada. <strong>Não realizamos reposições</strong> extras destes itens durante a estadia.
+                    Nota: O kit é uma cortesia de entrada. <strong>Não realizamos reposições</strong> extras durante a estadia.
                 </div>
             </div>
-        </div>
-
-        <!-- Painel 4: Filtro de Água -->
-        <div class="tab-panel">
-            <div class="panel-header">
-                <div class="icon-wrap"><i class="fa-solid fa-faucet-drip"></i></div>
-                <h2>Água Fresca</h2>
-            </div>
-            <div class="panel-body">
+            <div class="sub-panel-content">
                 <p>Para sua total comodidade, a casa conta com um <strong>filtro de água natural</strong> diretamente na cozinha.</p>
                 <div class="highlight-box">
-                    <strong>Dica de Gelo:</strong> O filtro fornece água em temperatura natural. Para beber geladinha, preparamos e deixamos <strong>cubos de gelo prontos no congelador</strong> para você!
+                    <strong>Dica de Gelo:</strong> O filtro fornece água natural. Para beber geladinha, preparamos e deixamos <strong>cubos de gelo prontos no congelador</strong> para você!
                 </div>
             </div>
-        </div>
-
-        <!-- Painel 5: Lavanderia -->
-        <div class="tab-panel">
-            <div class="panel-header">
-                <div class="icon-wrap"><i class="fa-solid fa-shirt"></i></div>
-                <h2>Serviço de Lavanderia</h2>
-            </div>
-            <div class="panel-body">
-                <p>Mantenha suas roupas sempre limpas e frescas sem esforço algum!</p>
-                <p style="margin-top: 10px;"><strong>Como funciona:</strong> Você só precisa nos entregar o cesto de roupas. Nós faremos o serviço e te devolveremos tudo limpo e seco.</p>
+            <div class="sub-panel-content">
+                <p>Mantenha suas roupas limpas sem esforço algum! Você só precisa nos entregar o cesto de roupas, nós lavamos e devolvemos tudo seco.</p>
                 <div class="highlight-box">
-                    A <strong>primeira lavagem é gratuita</strong>! Para as lavagens seguintes, cobramos uma taxa de apenas <strong>R$ 25 por cesto</strong>.
+                    A <strong>primeira lavagem é gratuita</strong>! Para as seguintes, cobramos uma taxa de apenas <strong>R$ 25 por cesto</strong>.
                 </div>
-                <!-- Botão dinâmico de solicitação pelo Whatsapp -->
                 <a href="https://wa.me/5592982308520?text=Olá!%20Gostaria%20de%20solicitar%20o%20serviço%20de%20lavanderia%20da%20minha%20hospedagem.%20🧺" target="_blank" class="btn-whatsapp">
                     <i class="fa-brands fa-whatsapp"></i> Solicitar Lavanderia
                 </a>
             </div>
+            <div class="sub-panel-content">
+                <p>O pátio de trás é uma área restrita, utilizada exclusivamente para a podagem, cuidados botânicos e manutenção das plantas.</p>
+                <p style="margin-top: 10px;">Por esse motivo, <strong>a porta da cozinha permanece trancada</strong>. Não há acesso por ali durante a sua estadia 🥰.</p>
+            </div>
         </div>
 
-        <!-- Painel 6: Acesso ao Pátio -->
-        <div class="tab-panel">
+        <!-- Painel 2: Como Chegar -->
+        <div class="tab-panel" id="panel-1">
             <div class="panel-header">
-                <div class="icon-wrap"><i class="fa-solid fa-door-closed"></i></div>
-                <h2>Área de Manutenção</h2>
+                <div class="icon-wrap"><i class="fa-solid fa-map-location-dot"></i></div>
+                <h2>Como Chegar</h2>
             </div>
-            <div class="panel-body">
-                <p>O pátio de trás é uma área restrita, utilizada exclusivamente para a podagem, cuidados botânicos e manutenção das plantas da casa.</p>
-                <p style="margin-top: 10px;">Por esse motivo, <strong>a porta da cozinha permanece trancada</strong>. Não há acesso de hóspedes nem de membros da nossa equipe por ali durante a estadia 🥰.</p>
+            <div class="panel-body panel-scroll">
+                <p>Estamos localizados em uma região central de Manaus, no complexo residencial Prosamim.</p>
+                <div class="highlight-box" style="margin: 12px 0;">
+                    <i class="fa-solid fa-location-dot"></i> <strong>Endereço Completo:</strong><br>
+                    Av. Igarapé de Manaus, Bloco 18, Apto 12, Quadra 2a<br>
+                    Centro, Manaus - AM<br>
+                    <strong>CEP:</strong> 69020-250
+                </div>
+                <div class="map-wrapper">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3983.8168239011736!2d-60.0175512!3d-3.1430556!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x926c0563456789ab%3A0x123456789abcdef!2sAv.%20Igarap%C3%A9%20de%20Manaus%2C%20Manaus%20-%20AM%2C%2069020-250!5e0!3m2!1spt-BR!2sbr!4v1710000000000" allowfullscreen="" loading="lazy"></iframe>
+                </div>
             </div>
         </div>
 
-        <!-- Painel 7: Check-out -->
-        <div class="tab-panel">
+        <!-- Painel 3: Mercados & Farmácias (Com Sub-Abas) -->
+        <div class="tab-panel" id="panel-2">
+            <div class="panel-header">
+                <div class="icon-wrap"><i class="fa-solid fa-basket-shopping"></i></div>
+                <div>
+                    <h2>Mercados & Farmácias</h2>
+                    <p style="font-size: 0.75rem; color: var(--primary);">Selecione uma categoria abaixo</p>
+                </div>
+            </div>
+            
+            <!-- Menu interno de sub-abas -->
+            <div class="sub-tabs-nav">
+                <button class="sub-tab-btn active" onclick="switchSubTab(2, 0)"><i class="fa-solid fa-cart-shopping"></i> Mercados</button>
+                <button class="sub-tab-btn" onclick="switchSubTab(2, 1)"><i class="fa-solid fa-prescription-bottle-medical"></i> Farmácias</button>
+            </div>
+
+            <!-- Conteúdo Sub-aba 0: Mercados -->
+            <div class="sub-panel-content active panel-scroll">
+                <div class="guide-section" style="border:none; padding-top:0; margin-top:5px;">
+                    <h3>Kitandinha Tm</h3>
+                    <p>O mercadinho local do complexo residencial Prosamim. Perfeito para compras muito rápidas de emergência, água, gelo e lanches sem precisar se afastar.</p>
+                    <a href="https://maps.google.com/?q=Kitandinha+Tm+Av+Igarape+de+Manaus+Centro+Manaus" target="_blank" class="map-link-card">
+                        <i class="fa-solid fa-location-dot"></i> Ver localização
+                    </a>
+                </div>
+                <div class="guide-section">
+                    <h3>Supermercados DB Cachoeirinha</h3>
+                    <p>A melhor opção para quem precisa de um mercado maior. Um supermercado amplo e estruturado, oferecendo excelente variedade de marcas e produtos de dispensa.</p>
+                    <a href="https://maps.google.com/?q=Supermercados+DB+Av+Carvalho+Leal+1017+Cachoeirinha+Manaus" target="_blank" class="map-link-card">
+                        <i class="fa-solid fa-location-dot"></i> Ver localização
+                    </a>
+                </div>
+                <div class="guide-section">
+                    <h3>Feira Manaus Moderna</h3>
+                    <p>Quase um ponto turístico tradicional da cidade! O lugar ideal para mergulhar na cultura local e adquirir peixes amazônicos legítimos e frutas regionais frescas.</p>
+                    <a href="https://maps.google.com/?q=Feira+Manaus+Moderna+Rua+dos+Bares+Centro+Manaus" target="_blank" class="map-link-card">
+                        <i class="fa-solid fa-location-dot"></i> Ver localização
+                    </a>
+                </div>
+            </div>
+
+            <!-- Conteúdo Sub-aba 1: Farmácias -->
+            <div class="sub-panel-content panel-scroll">
+                <div class="guide-section" style="border:none; padding-top:0; margin-top:5px;">
+                    <h3>Santo Remédio - J. Nabuco 24h</h3>
+                    <p>Excelente drogaria com atendimento completo disponível 24 horas por dia. Perfeita para qualquer necessidade noturna de medicamentos ou conveniência.</p>
+                    <a href="https://maps.google.com/?q=Drogaria+Santo+Remedio+Av+Joaquim+Nabuco+1841+Centro+Manaus" target="_blank" class="map-link-card">
+                        <i class="fa-solid fa-location-dot"></i> Ver localização
+                    </a>
+                </div>
+                <div class="guide-section">
+                    <h3>PagueMenos</h3>
+                    <p>Outra ótima opção de farmácia muito bem localizada na região central, ideal para itens de higiene pessoal, cosméticos e cuidados gerais.</p>
+                    <a href="https://maps.google.com/?q=Farmacia+Pague+Menos+Av+Joaquim+Nabuco+2305+Centro+Manaus" target="_blank" class="map-link-card">
+                        <i class="fa-solid fa-location-dot"></i> Ver localização
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Painel 4: Restaurantes Próximos -->
+        <div class="tab-panel" id="panel-3">
+            <div class="panel-header">
+                <div class="icon-wrap"><i class="fa-solid fa-utensils"></i></div>
+                <h2>Restaurantes Próximos</h2>
+            </div>
+            <div class="panel-body panel-scroll">
+                <p>Experimente os sabores inconfundíveis da gastronomia manauara sem ir longe:</p>
+                <div class="guide-section">
+                    <h3>Tambaqui de Banda</h3>
+                    <p>Fica ao lado do Teatro Amazonas. A maior referência para saborear os peixes da bacia amazônica assados na brasa com ótimos acompanhamentos tradicionais.</p>
+                    <a href="https://maps.google.com/?q=Tambaqui+de+Banda+Rua+Jose+Clemente+Centro+Manaus" target="_blank" class="map-link-card">
+                        <i class="fa-solid fa-location-dot"></i> Ver localização
+                    </a>
+                </div>
+                <div class="guide-section">
+                    <h3>Tacacá da Ivete</h3>
+                    <p>Excelente opção regional localizada na icônica Rua 10 de Julho. Ideal para experimentar um autêntico tacacá e iguarias nortistas no final da tarde.</p>
+                    <a href="https://maps.google.com/?q=Tacaca+da+Ivete+Rua+10+de+Julho+Centro+Manaus" target="_blank" class="map-link-card">
+                        <i class="fa-solid fa-location-dot"></i> Ver localização
+                    </a>
+                </div>
+                <div class="guide-section">
+                    <h3>Coreto Manaós Café & Almoço Regional</h3>
+                    <p>Excelente escolha para desfrutar de um delicioso café da manhã regional (com o famoso x-caboquinho) ou um almoço com a legítima culinária caseira de Manaus.</p>
+                    <a href="https://maps.google.com/?q=Coreto+Manaos+Cafe+Almoco+Regional+Manaus" target="_blank" class="map-link-card">
+                        <i class="fa-solid fa-location-dot"></i> Ver localização
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Painel 5: Pontos Turísticos Próximos -->
+        <div class="tab-panel" id="panel-4">
+            <div class="panel-header">
+                <div class="icon-wrap"><i class="fa-solid fa-camera-retro"></i></div>
+                <h2>Pontos Turísticos</h2>
+            </div>
+            <div class="panel-body panel-scroll">
+                <p>Aproveite a excelente localização para explorar a história e a arquitetura da cidade:</p>
+                <div class="guide-section">
+                    <h3>Teatro Amazonas & Largo</h3>
+                    <p>O coração cultural e cartão-postal mais famoso de Manaus, inaugurado em 1896. Um monumento suntuoso que conta a história áurea da borracha.</p>
+                    <a href="https://maps.google.com/?q=Teatro+Amazonas+Largo+de+Sao+Sebastiao+Manaus" target="_blank" class="map-link-card">
+                        <i class="fa-solid fa-location-dot"></i> Ver localização
+                    </a>
+                </div>
+                <div class="guide-section">
+                    <h3>Palácio Rio Negro</h3>
+                    <p>Antiga sede do governo do estado. Hoje um lindo centro cultural com visitação aberta, apresentando arquitetura imponente da belle époque e belos jardins.</p>
+                    <a href="https://maps.google.com/?q=Palacio+Rio+Negro+Av+Sete+de+Setembro+Manaus" target="_blank" class="map-link-card">
+                        <i class="fa-solid fa-location-dot"></i> Ver localização
+                    </a>
+                </div>
+                <div class="guide-section">
+                    <h3>Mercado Municipal Adolpho Lisboa</h3>
+                    <p>Localizado às margens do Rio Negro, destaca-se por sua marcante estrutura de ferro fundido importada da Europa. Perfeito para comprar belos artesanatos regionais.</p>
+                    <a href="https://maps.google.com/?q=Mercado+Municipal+Adolpho+Lisboa+Rua+dos+Bares+Manaus" target="_blank" class="map-link-card">
+                        <i class="fa-solid fa-location-dot"></i> Ver localização
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Painel 6: Check-out -->
+        <div class="tab-panel" id="panel-5">
             <div class="panel-header">
                 <div class="icon-wrap"><i class="fa-solid fa-key"></i></div>
                 <h2>Seu Check-out</h2>
             </div>
             <div class="panel-body">
                 <p>Esperamos que tenha tido dias incríveis! A saída pode ser realizada <strong>até as 11:00h</strong> da manhã.</p>
-                <p style="margin-top: 10px;">Pedimos gentilmente que <strong>nos avise sobre seu horário de saída</strong>. O anfitrião ou alguém do nosso time irá te receber para recolher as chaves pessoalmente.</p>
-                <!-- Botão dinâmico de aviso pelo Whatsapp -->
-                <a href="https://wa.me/5592982308520?text=Olá!%20Estou%20passando%20para%20avisar%20que%20meu%20check-out%20está%20planejado%20para%20as%20" target="_blank" class="btn-whatsapp" id="checkoutBtn">
+                <p style="margin-top: 10px;">Pedimos gentilmente que nos avise o seu horário estimado de saída. O time irá te receber para recolher as chaves pessoalmente.</p>
+                <a href="#" class="btn-whatsapp" id="checkoutBtn">
                     <i class="fa-brands fa-whatsapp"></i> Avisar Horário de Saída
                 </a>
-                <p style="margin-top: 15px; font-weight: 500; text-align: center; color: var(--primary);">Tenha uma ótima estadia! 🥰</p>
             </div>
         </div>
 
@@ -155,7 +266,6 @@
         <i class="fa-solid fa-angles-left"></i> Deslize o menu ou a tela para navegar <i class="fa-solid fa-angles-right"></i>
     </div>
 
-    <!-- Arquivo JS Externo -->
     <script src="script.js"></script>
 </body>
 </html>
