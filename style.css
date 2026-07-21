@@ -391,6 +391,41 @@ header p {
     border: 0;
 }
 
+/* ===== BOTÃO COPIAR SENHA ===== */
+.btn-copy-password {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(245, 176, 66, 0.12);
+    color: #f5b042;
+    font-weight: 600;
+    font-size: 0.8rem;
+    padding: 8px 18px;
+    border-radius: 30px;
+    border: 1px solid rgba(245, 176, 66, 0.2);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 12px;
+    width: 100%;
+    justify-content: center;
+}
+
+.btn-copy-password:hover {
+    background: rgba(245, 176, 66, 0.2);
+    transform: scale(1.02);
+    box-shadow: 0 4px 20px rgba(245, 176, 66, 0.15);
+}
+
+.btn-copy-password.copied {
+    background: rgba(37, 211, 102, 0.15);
+    border-color: #25D366;
+    color: #25D366;
+}
+
+.btn-copy-password i {
+    font-size: 1rem;
+}
+
 /* ===== FOOTER HINT ===== */
 .footer-hint {
     position: fixed;

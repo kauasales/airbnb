@@ -105,16 +105,68 @@
             </div>
 
             <div class="sub-tabs-nav">
-                <button class="sub-tab-btn active" onclick="switchSubTab(1,0)"><i class="fa-solid fa-snowflake"></i> <span id="sub1_0">Clima</span></button>
-                <button class="sub-tab-btn" onclick="switchSubTab(1,1)"><i class="fa-solid fa-shirt"></i> <span id="sub1_1">Lavanderia</span></button>
-                <button class="sub-tab-btn" onclick="switchSubTab(1,2)"><i class="fa-solid fa-tree"></i> <span id="sub1_2">Pátio</span></button>
-                <button class="sub-tab-btn" onclick="switchSubTab(1,3)"><i class="fa-solid fa-gift"></i> <span id="sub1_3">Mimos</span></button>
-                <button class="sub-tab-btn" onclick="switchSubTab(1,4)"><i class="fa-solid fa-car"></i> <span id="sub1_4">Estacionamento</span></button>
-                <button class="sub-tab-btn" onclick="switchSubTab(1,5)"><i class="fa-solid fa-leaf"></i> <span id="sub1_5">Plantas</span></button>
+                <button class="sub-tab-btn active" onclick="switchSubTab(1,0)"><i class="fa-solid fa-wifi"></i> <span id="sub1_0">Wi-Fi</span></button>
+                <button class="sub-tab-btn" onclick="switchSubTab(1,1)"><i class="fa-solid fa-wine-glass-empty"></i> <span id="sub1_1">Vinhos</span></button>
+                <button class="sub-tab-btn" onclick="switchSubTab(1,2)"><i class="fa-solid fa-snowflake"></i> <span id="sub1_2">Clima</span></button>
+                <button class="sub-tab-btn" onclick="switchSubTab(1,3)"><i class="fa-solid fa-shirt"></i> <span id="sub1_3">Lavanderia</span></button>
+                <button class="sub-tab-btn" onclick="switchSubTab(1,4)"><i class="fa-solid fa-tree"></i> <span id="sub1_4">Pátio</span></button>
+                <button class="sub-tab-btn" onclick="switchSubTab(1,5)"><i class="fa-solid fa-gift"></i> <span id="sub1_5">Mimos</span></button>
+                <button class="sub-tab-btn" onclick="switchSubTab(1,6)"><i class="fa-solid fa-car"></i> <span id="sub1_6">Estacionamento</span></button>
+                <button class="sub-tab-btn" onclick="switchSubTab(1,7)"><i class="fa-solid fa-leaf"></i> <span id="sub1_7">Plantas</span></button>
+            </div>
+
+            <!-- Sub: Wi-Fi -->
+            <div class="sub-panel-content active">
+                <div class="visual-card">
+                    <span class="card-icon"><i class="fa-solid fa-wifi"></i></span>
+                    <h4 id="wifiTitle">Wi-Fi disponível</h4>
+                    <p id="wifiDesc">Conecte-se à rede para ter internet de alta velocidade durante sua estadia.</p>
+                    <div style="margin-top: 12px; background: rgba(255,255,255,0.05); border-radius: 12px; padding: 14px;">
+                        <div style="display: flex; justify-content: space-between; align-items: center; padding: 6px 0; border-bottom: 1px solid rgba(255,255,255,0.05);">
+                            <span id="wifiNet1" style="color: rgba(255,255,255,0.4); font-size: 0.7rem; font-weight: 600;">REDE 2.4 GHz</span>
+                            <span style="color: #f5b042; font-weight: 600; font-size: 0.85rem; font-family: monospace;">LIVE_TIM_EEA4_2G</span>
+                        </div>
+                        <div style="display: flex; justify-content: space-between; align-items: center; padding: 6px 0;">
+                            <span id="wifiNet2" style="color: rgba(255,255,255,0.4); font-size: 0.7rem; font-weight: 600;">REDE 5 GHz</span>
+                            <span style="color: #f5b042; font-weight: 600; font-size: 0.85rem; font-family: monospace;">LIVE_TIM_EEA4_5G</span>
+                        </div>
+                    </div>
+                    <button onclick="copyPassword()" class="btn-copy-password" id="wifiCopyBtn">
+                        <i class="fa-regular fa-copy"></i> <span id="wifiCopyLabel">Copiar senha</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Sub: Vinhos -->
+            <div class="sub-panel-content">
+                <div class="visual-card">
+                    <span class="card-icon"><i class="fa-solid fa-wine-glass"></i></span>
+                    <h4 id="vinhosTitle">Vinhos Selecionados pelo Salem</h4>
+                    <p id="vinhosDesc">Aprecie rótulos especiais escolhidos a dedo para tornar sua estadia ainda mais memorável.</p>
+                    
+                    <div style="margin-top: 14px; background: rgba(245, 176, 66, 0.06); border-radius: 12px; padding: 16px; border: 1px solid rgba(245, 176, 66, 0.1);">
+                        <div style="display: flex; justify-content: space-between; align-items: center; padding: 6px 0;">
+                            <div style="display: flex; align-items: center; gap: 8px;">
+                                <i class="fa-solid fa-wine-bottle" style="color: #f5b042;"></i>
+                                <span id="vinhosValueTitle" style="color: rgba(255,255,255,0.7); font-size: 0.8rem;"><strong>Garrafa de Vinho</strong></span>
+                            </div>
+                            <span style="color: #f5b042; font-weight: 600; font-size: 0.85rem;">R$ 50</span>
+                        </div>
+                    </div>
+                    
+                    <p style="margin-top: 12px; font-size: 0.75rem; color: rgba(255,255,255,0.4); font-style: italic;">
+                        <i class="fa-regular fa-circle-check" style="color: #f5b042;"></i> 
+                        <span id="vinhosObs">Aproveite com tranquilidade: você pode informar seus consumos e realizar o pagamento no momento do check-out.</span>
+                    </p>
+                    
+                    <span class="tag" id="vinhosTag1">Pague no check-out</span>
+                    <span class="tag" id="vinhosTag2">PIX</span>
+                    <span class="tag" id="vinhosTag3">Cartão de Crédito</span>
+                </div>
             </div>
 
             <!-- Sub: Clima -->
-            <div class="sub-panel-content active">
+            <div class="sub-panel-content">
                 <div class="visual-card">
                     <span class="card-icon"><i class="fa-solid fa-snowflake"></i></span>
                     <h4 id="climaTitle">Ar-condicionado em todos os ambientes</h4>

@@ -31,7 +31,7 @@ function applyTranslations(lang) {
     document.getElementById('checkinInfoTag').textContent = t.checkinInfoTag;
     document.getElementById('checkinBtnLabel').textContent = t.checkinBtnLabel;
     
-    // Panel 1 - Acomodação
+    // Panel 1 - Acomodação (Wi-Fi + Vinhos)
     document.getElementById('panel1Title').textContent = t.panel1Title;
     document.getElementById('sub1_0').textContent = t.sub1_0;
     document.getElementById('sub1_1').textContent = t.sub1_1;
@@ -39,6 +39,23 @@ function applyTranslations(lang) {
     document.getElementById('sub1_3').textContent = t.sub1_3;
     document.getElementById('sub1_4').textContent = t.sub1_4;
     document.getElementById('sub1_5').textContent = t.sub1_5;
+    document.getElementById('sub1_6').textContent = t.sub1_6;
+    document.getElementById('sub1_7').textContent = t.sub1_7;
+    
+    document.getElementById('wifiTitle').textContent = t.wifiTitle;
+    document.getElementById('wifiNet1').textContent = t.wifiNet1;
+    document.getElementById('wifiNet2').textContent = t.wifiNet2;
+    document.getElementById('wifiDesc').textContent = t.wifiDesc;
+    document.getElementById('wifiCopyLabel').textContent = t.wifiCopyLabel;
+    
+    // Vinhos
+    document.getElementById('vinhosTitle').textContent = t.vinhosTitle;
+    document.getElementById('vinhosDesc').textContent = t.vinhosDesc;
+    document.getElementById('vinhosObs').textContent = t.vinhosObs;
+    document.getElementById('vinhosValueTitle').textContent = t.vinhosValueTitle;
+    document.getElementById('vinhosTag1').textContent = t.vinhosTag1;
+    document.getElementById('vinhosTag2').textContent = t.vinhosTag2;
+    document.getElementById('vinhosTag3').textContent = t.vinhosTag3;
     
     document.getElementById('climaTitle').textContent = t.climaTitle;
     document.getElementById('climaDesc').textContent = t.climaDesc;
@@ -212,6 +229,37 @@ function switchSubTab(panelIndex, subIndex) {
 
     subContents.forEach((content, i) => {
         content.classList.toggle('active', i === subIndex);
+    });
+}
+
+// ===== COPIAR SENHA DO Wi-Fi =====
+function copyPassword() {
+    const password = 'krmkh38v2t';
+    const btn = document.getElementById('wifiCopyBtn');
+    const label = document.getElementById('wifiCopyLabel');
+    
+    // Copiar para a área de transferência
+    navigator.clipboard.writeText(password).then(() => {
+        // Feedback visual
+        btn.classList.add('copied');
+        const originalText = label.textContent;
+        const lang = currentLang;
+        
+        const feedback = {
+            pt: 'Senha copiada!',
+            en: 'Password copied!',
+            es: '¡Contraseña copiada!'
+        };
+        
+        label.textContent = feedback[lang] || feedback.pt;
+        
+        setTimeout(() => {
+            btn.classList.remove('copied');
+            label.textContent = originalText;
+        }, 3000);
+    }).catch(() => {
+        // Fallback para navegadores que não suportam clipboard
+        alert('Copie manualmente: krmkh38v2t');
     });
 }
 

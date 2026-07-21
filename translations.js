@@ -28,12 +28,29 @@ const translations = {
         
         // Panel 1 - Acomodação
         panel1Title: "Acomodação",
-        sub1_0: "Clima",
-        sub1_1: "Lavanderia",
-        sub1_2: "Pátio",
-        sub1_3: "Mimos",
-        sub1_4: "Estacionamento",
-        sub1_5: "Plantas",
+        sub1_0: "Wi-Fi",
+        sub1_1: "Vinhos",
+        sub1_2: "Clima",
+        sub1_3: "Lavanderia",
+        sub1_4: "Pátio",
+        sub1_5: "Mimos",
+        sub1_6: "Estacionamento",
+        sub1_7: "Plantas",
+        
+        wifiTitle: "Wi-Fi disponível",
+        wifiNet1: "REDE 2.4 GHz",
+        wifiNet2: "REDE 5 GHz",
+        wifiDesc: "Conecte-se à rede para ter internet de alta velocidade durante sua estadia.",
+        wifiCopyLabel: "Copiar senha",
+        
+        // Vinhos
+        vinhosTitle: "Vinhos Selecionados pelo Salem",
+        vinhosDesc: "Aprecie rótulos especiais escolhidos a dedo para tornar sua estadia ainda mais memorável.",
+        vinhosObs: "Aproveite com tranquilidade: você pode informar seus consumos e realizar o pagamento no momento do check-out.",
+        vinhosValueTitle: "Garrafa de Vinho",
+        vinhosTag1: "Pague no check-out",
+        vinhosTag2: "PIX",
+        vinhosTag3: "Cartão de Crédito",
         
         climaTitle: "Ar-condicionado em todos os ambientes",
         climaDesc: "Fique à vontade para ajustar a temperatura. Lembre-se de desligar ao sair para ajudar no consumo de energia.",
@@ -141,7 +158,7 @@ const translations = {
         panel6Title: "Check-out",
         checkoutTitle: "Saída até 11:00h",
         checkoutDesc: "Avise seu horário com antecedência.",
-        checkoutBtnLabel: "Avisar horário de chek-out",
+        checkoutBtnLabel: "Avisar horário de check-out",
         
         // Footer
         footerHint: "Deslize para navegar"
@@ -174,13 +191,30 @@ const translations = {
         
         // Panel 1 - Accommodation
         panel1Title: "Accommodation",
-        sub1_0: "Climate",
-        sub1_1: "Laundry",
-        sub1_2: "Backyard",
-        sub1_3: "Welcome Kit",
-        sub1_4: "Parking",
-        sub1_5: "Plants",
+        sub1_0: "Wi-Fi",
+        sub1_1: "Wines",
+        sub1_2: "Climate",
+        sub1_3: "Laundry",
+        sub1_4: "Backyard",
+        sub1_5: "Welcome Kit",
+        sub1_6: "Parking",
+        sub1_7: "Plants",
         
+        wifiTitle: "Wi-Fi available",
+        wifiNet1: "2.4 GHz NETWORK",
+        wifiNet2: "5 GHz NETWORK",
+        wifiDesc: "Connect to the network for high-speed internet during your stay.",
+        wifiCopyLabel: "Copy password",
+        
+        // Wines
+        vinhosTitle: "Wines Selected by Salem",
+        vinhosDesc: "Enjoy special labels handpicked to make your stay even more memorable.",
+        vinhosObs: "Enjoy your stay: you can report your consumption and complete the payment at check out.",
+        vinhosValueTitle: "Bottle of wine",
+        vinhosTag1: "Payment at check out",
+        vinhosTag2: "PIX",
+        vinhosTag3: "Credit Card",
+
         climaTitle: "Air conditioning in all rooms",
         climaDesc: "Feel free to adjust the temperature. Remember to turn it off when leaving to help save energy.",
         climaTag: "Tip: turn off when leaving",
@@ -320,13 +354,30 @@ const translations = {
         
         // Panel 1 - Alojamiento
         panel1Title: "Alojamiento",
-        sub1_0: "Clima",
-        sub1_1: "Lavandería",
-        sub1_2: "Patio",
-        sub1_3: "Mimos",
-        sub1_4: "Estacionamiento",
-        sub1_5: "Plantas",
+        sub1_0: "Wi-Fi",
+        sub1_1: "Vinos",
+        sub1_2: "Clima",
+        sub1_3: "Lavandería",
+        sub1_4: "Patio",
+        sub1_5: "Mimos",
+        sub1_6: "Estacionamiento",
+        sub1_7: "Plantas",
         
+        wifiTitle: "Wi-Fi disponible",
+        wifiNet1: "RED 2.4 GHz",
+        wifiNet2: "RED 5 GHz",
+        wifiDesc: "Conéctate a la red para tener internet de alta velocidad durante tu estadía.",
+        wifiCopyLabel: "Copiar contraseña",
+        
+        // Vinos
+        vinhosTitle: "Vinos Seleccionados por Salem",
+        vinhosDesc: "Disfruta de etiquetas especiales elegidas a dedo para hacer tu estancia aún más memorable.",
+        vinhosObs: "Disfrute con tranquilidad: puede informar sus consumos y realizar el pago al momento del check-out.",
+        vinhosValueTitle: "Botella de vino",
+        vinhosTag1: "Pague al check-out",
+        vinhosTag2: "PIX",
+        vinhosTag3: "Tarjeta de Crédito",
+
         climaTitle: "Aire acondicionado en todos los ambientes",
         climaDesc: "Siéntase libre de ajustar la temperatura. Recuerde apagarlo al salir para ayudar a ahorrar energía.",
         climaTag: "Consejo: apague al salir",
