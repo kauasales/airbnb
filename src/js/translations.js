@@ -29,9 +29,9 @@ const translations = {
         // Panel 1 - Acomodação
         panel1Title: "Acomodação",
         sub1_0: "Wi-Fi",
-        sub1_1: "Vinhos",
-        sub1_2: "Clima",
-        sub1_3: "Lavanderia",
+        sub1_1: "Lavanderia",
+        sub1_2: "Vinhos",
+        sub1_3: "Clima",
         sub1_4: "Pátio",
         sub1_5: "Mimos",
         sub1_6: "Estacionamento",
@@ -104,6 +104,9 @@ const translations = {
         
         // Panel 3 - Restaurantes
         panel3Title: "Restaurantes",
+        sub3_0: "Restaurantes e Cafés",
+        sub3_1: "Gastrobar",
+
         rest1Title: "Taboa Peixaria",
         rest1Desc: "Peixaria com vista para o Rio Negro. Especializada em peixes amazônicos.",
         rest1Map: "Ver no mapa",
@@ -114,7 +117,33 @@ const translations = {
         rest3Title: "Coreto Manaós",
         rest3Desc: "Café da manhã regional com x-caboquinho e almoço caseiro.",
         rest3Map: "Ver no mapa",
-        
+        rest4Title: "Caxiri",
+        rest4Desc: "Restaurante referência em Manaus, comandado pela chef Débora Shornik. Oferece uma experiência única com a culinária amazônica em um casarão restaurado com vista para o Teatro Amazonas.",
+        rest5Title: "Roseiral Restaurante e Café",
+        rest5Desc: "Ambiente romântico e sofisticado, cercado por roseiras. Oferece uma combinação perfeita de café especial e pratos refinados da culinária contemporânea.",
+        rest6Title: "Cafeteria do Largo",
+        rest6Desc: "Cafeteria charmosa localizada em um dos pontos mais pitorescos de Manaus. Perfeita para um café da tarde com quitutes caseiros e ambiente tranquilo.",
+        rest7Title: "Angatu Café",
+        rest7Desc: "Café colonial com inspiração portuguesa, servindo deliciosos bolos, tortas e um café de alta qualidade. Ambiente que remete às antigas confeitarias europeias.",
+        rest8Title: "Café Casa Monsenhor",
+        rest8Desc: "Cafeteria aconchegante em uma casa histórica. Especializada em cafés especiais, chás e uma seleção de doces e salgados feitos artesanalmente.",
+
+        // Gastrobar
+        gastro1Title: "Bar do Armando",
+        gastro1Desc: "Clássico bar manauara com mais de 40 anos de história. Ambiente descontraído, petiscos tradicionais e a famosa porção de filhote. Ponto de encontro de artistas e intelectuais da cidade.",
+        gastro2Title: "Benedito Bar",
+        gastro2Desc: "Bar com atmosfera intimista e decoração vintage. Especializado em drinks autorais e música ao vivo. Perfeito para um happy hour com os amigos.",
+        gastro3Title: "Farrapo Bar e Restaurante",
+        gastro3Desc: "Espaço com duas faces: restaurante requintado durante o dia e bar descolado à noite. Oferece gastronomia contemporânea com influências regionais e drinques criativos.",
+        gastro4Title: "Casario 179",
+        gastro4Desc: "Localizado em um casarão histórico do centro de Manaus, oferece uma experiência única com gastronomia afetiva, drinks especiais e um ambiente que preserva a memória da cidade.",
+        gastro5Title: "Caê",
+        gastro5Desc: "Bar com ares de bistrô, focado em gastronomia de autor com ingredientes amazônicos. Destaque para os pratos elaborados e os drinques com frutas regionais.",
+        gastro6Title: "Japeto Bar e Restaurante",
+        gastro6Desc: "Ambiente acolhedor que combina gastronomia de qualidade com uma carta de vinhos e drinques bem selecionada. Especializado em carnes nobres e petiscos refinados.",
+        gastro7Title: "Sarará",
+        gastro7Desc: "Bar com identidade própria, mistura de boteco moderno com cozinha criativa. Clássicos da culinária de bar reinventados com toques de alta gastronomia.",
+
         // Panel 4 - Turismo
         panel4Title: "Pontos Turísticos",
         tur1Title: "Teatro Amazonas",
@@ -192,9 +221,9 @@ const translations = {
         // Panel 1 - Accommodation
         panel1Title: "Accommodation",
         sub1_0: "Wi-Fi",
-        sub1_1: "Wines",
-        sub1_2: "Climate",
-        sub1_3: "Laundry",
+        sub1_1: "Laundry",
+        sub1_2: "Wines",
+        sub1_3: "Climate",
         sub1_4: "Backyard",
         sub1_5: "Welcome Kit",
         sub1_6: "Parking",
@@ -267,6 +296,9 @@ const translations = {
         
         // Panel 3 - Restaurants
         panel3Title: "Restaurants",
+        sub3_0: "Restaurants & Cafes",
+        sub3_1: "Gastrobar",
+
         rest1Title: "Taboa Peixaria",
         rest1Desc: "Seafood restaurant with a view of the Rio Negro. Specializing in Amazonian fish.",
         rest1Map: "View on map",
@@ -277,7 +309,33 @@ const translations = {
         rest3Title: "Coreto Manaós",
         rest3Desc: "Regional breakfast with x-caboquinho and homemade lunch.",
         rest3Map: "View on map",
-        
+        rest4Title: "Caxiri",
+        rest4Desc: "A reference restaurant in Manaus, run by chef Débora Shornik. It offers a unique Amazonian culinary experience in a restored mansion with a view of the Teatro Amazonas.",
+        rest5Title: "Roseiral Restaurante e Café",
+        rest5Desc: "Romantic and sophisticated ambiance surrounded by rose bushes. Offers a perfect combination of specialty coffee and refined contemporary dishes.",
+        rest6Title: "Cafeteria do Largo",
+        rest6Desc: "Charming café located in one of Manaus' most picturesque spots. Perfect for an afternoon coffee with homemade treats and a peaceful atmosphere.",
+        rest7Title: "Angatu Café",
+        rest7Desc: "Colonial café with Portuguese inspiration, serving delicious cakes, pies, and high-quality coffee. Atmosphere reminiscent of old European bakeries.",
+        rest8Title: "Café Casa Monsenhor",
+        rest8Desc: "Cozy café in a historic house. Specializing in specialty coffees, teas, and a selection of artisanal sweets and savory snacks.",
+
+        // Gastrobar
+        gastro1Title: "Bar do Armando",
+        gastro1Desc: "Classic Manaus bar with over 40 years of history. Relaxed atmosphere, traditional snacks, and the famous filhote portion. Meeting point for artists and intellectuals.",
+        gastro2Title: "Benedito Bar",
+        gastro2Desc: "Bar with an intimate atmosphere and vintage decor. Specializing in signature cocktails and live music. Perfect for a happy hour with friends.",
+        gastro3Title: "Farrapo Bar e Restaurante",
+        gastro3Desc: "Two-in-one space: a refined restaurant during the day and a cool bar at night. Offers contemporary cuisine with regional influences and creative drinks.",
+        gastro4Title: "Casario 179",
+        gastro4Desc: "Located in a historic mansion in downtown Manaus, offers a unique experience with comfort food, special drinks, and an atmosphere that preserves the city's memory.",
+        gastro5Title: "Caê",
+        gastro5Desc: "Bar with a bistro vibe, focused on author cuisine with Amazonian ingredients. Highlights include elaborate dishes and drinks with regional fruits.",
+        gastro6Title: "Japeto Bar e Restaurante",
+        gastro6Desc: "Welcoming environment combining quality gastronomy with a well-selected wine and drink list. Specialized in premium meats and refined appetizers.",
+        gastro7Title: "Sarará",
+        gastro7Desc: "Bar with its own identity, blending modern pub with creative cuisine. Classic bar food reinvented with touches of high gastronomy.",
+
         // Panel 4 - Tourism
         panel4Title: "Tourist Attractions",
         tur1Title: "Teatro Amazonas",
@@ -355,9 +413,9 @@ const translations = {
         // Panel 1 - Alojamiento
         panel1Title: "Alojamiento",
         sub1_0: "Wi-Fi",
-        sub1_1: "Vinos",
-        sub1_2: "Clima",
-        sub1_3: "Lavandería",
+        sub1_1: "Lavandería",
+        sub1_2: "Vinos",
+        sub1_3: "Clima",
         sub1_4: "Patio",
         sub1_5: "Mimos",
         sub1_6: "Estacionamiento",
@@ -430,6 +488,9 @@ const translations = {
         
         // Panel 3 - Restaurantes
         panel3Title: "Restaurantes",
+        sub3_0: "Restaurantes y Cafeterías",
+        sub3_1: "Gastrobar",
+
         rest1Title: "Taboa Peixaria",
         rest1Desc: "Pescadería con vista al Río Negro. Especializada en pescados amazónicos.",
         rest1Map: "Ver en el mapa",
@@ -440,7 +501,33 @@ const translations = {
         rest3Title: "Coreto Manaós",
         rest3Desc: "Desayuno regional con x-caboquinho y almuerzo casero.",
         rest3Map: "Ver en el mapa",
-        
+        rest4Title: "Caxiri",
+        rest4Desc: "Restaurante de referencia en Manaus, dirigido por la chef Débora Shornik. Ofrece una experiencia única con la cocina amazónica en una mansión restaurada con vista al Teatro Amazonas.",
+        rest5Title: "Roseiral Restaurante e Café",
+        rest5Desc: "Ambiente romántico y sofisticado, rodeado de rosales. Ofrece una combinación perfecta de café especial y platos refinados de la cocina contemporánea.",
+        rest6Title: "Cafeteria do Largo",
+        rest6Desc: "Acogedora cafetería ubicada en uno de los puntos más pintorescos de Manaus. Perfecta para un café por la tarde con dulces caseros y ambiente tranquilo.",
+        rest7Title: "Angatu Café",
+        rest7Desc: "Café colonial con inspiración portuguesa, que sirve deliciosos pasteles, tartas y café de alta calidad. Ambiente que recuerda a las antiguas pastelerías europeas.",
+        rest8Title: "Café Casa Monsenhor",
+        rest8Desc: "Acogedora cafetería en una casa histórica. Especializada en cafés especiales, tés y una selección de dulces y snacks artesanales.",
+
+        // Gastrobar
+        gastro1Title: "Bar do Armando",
+        gastro1Desc: "Clásico bar de Manaus con más de 40 años de historia. Ambiente relajado, aperitivos tradicionales y la famosa porción de filhote. Punto de encuentro de artistas e intelectuales.",
+        gastro2Title: "Benedito Bar",
+        gastro2Desc: "Bar con atmósfera íntima y decoración vintage. Especializado en cócteles de autor y música en vivo. Perfecto para un happy hour con amigos.",
+        gastro3Title: "Farrapo Bar e Restaurante",
+        gastro3Desc: "Espacio de dos caras: restaurante refinado durante el día y bar moderno por la noche. Ofrece gastronomía contemporánea con influencias regionales y tragos creativos.",
+        gastro4Title: "Casario 179",
+        gastro4Desc: "Ubicado en una mansión histórica en el centro de Manaus, ofrece una experiencia única con gastronomía afectiva, tragos especiales y un ambiente que preserva la memoria de la ciudad.",
+        gastro5Title: "Caê",
+        gastro5Desc: "Bar con aires de bistró, enfocado en gastronomía de autor con ingredientes amazónicos. Destacan los platos elaborados y los tragos con frutas regionales.",
+        gastro6Title: "Japeto Bar e Restaurante",
+        gastro6Desc: "Ambiente acogedor que combina gastronomía de calidad con una carta de vinos y tragos bien seleccionada. Especializado en carnes nobles y aperitivos refinados.",
+        gastro7Title: "Sarará",
+        gastro7Desc: "Bar con identidad propia, mezcla de bar moderno con cocina creativa. Clásicos de la cocina de bar reinventados con toques de alta gastronomía.",
+
         // Panel 4 - Turismo
         panel4Title: "Puntos Turísticos",
         tur1Title: "Teatro Amazonas",

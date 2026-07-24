@@ -55,11 +55,22 @@ body {
 header {
     position: relative;
     z-index: 5;
-    text-align: center;
     padding: 30px 20px 10px;
     background: rgba(10, 10, 15, 0.5);
     backdrop-filter: blur(6px);
     border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.header-left {
+    text-align: left;
 }
 
 header h1 {
@@ -71,12 +82,21 @@ header h1 {
     -webkit-text-fill-color: transparent;
 }
 
-header p {
-    font-size: 0.9rem;
-    color: rgba(255, 255, 255, 0.5);
-    font-weight: 300;
-    margin-top: 2px;
-    letter-spacing: 2px;
+#langToggle {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #fff;
+    padding: 8px 16px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 0.8rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(4px);
+}
+
+#langToggle:hover {
+    background: rgba(255, 255, 255, 0.2);
 }
 
 /* ===== MENU PRINCIPAL (CIRCULAR / ÍCONES) ===== */
@@ -153,7 +173,7 @@ header p {
     z-index: 5;
     max-width: 600px;
     margin: 0 auto;
-    padding: 12px 14px 80px;
+    padding: 12px 14px 30px;
 }
 
 .tab-panel {
@@ -306,9 +326,17 @@ header p {
     font-size: 0.6rem;
     font-weight: 600;
     padding: 3px 12px;
+    margin-right: 5px;
     border-radius: 20px;
     letter-spacing: 0.3px;
     align-content: center;
+}
+
+.card-actions {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-top: 8px;
 }
 
 .map-link-card {
@@ -357,6 +385,87 @@ header p {
 .btn-whatsapp:hover {
     transform: scale(1.03);
     box-shadow: 0 12px 35px rgba(37, 211, 102, 0.3);
+}
+
+.btn-whatsapp-full {
+    width: 100%;
+    justify-content: center;
+}
+
+/* ===== WI-FI NETWORKS ===== */
+.wifi-networks {
+    margin-top: 12px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    padding: 14px;
+}
+
+.wifi-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6px 0;
+}
+
+.wifi-item:first-child {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.wifi-label {
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 0.7rem;
+    font-weight: 600;
+}
+
+.wifi-ssid {
+    color: #f5b042;
+    font-weight: 600;
+    font-size: 0.85rem;
+    font-family: monospace;
+}
+
+/* ===== VINHOS ===== */
+.vinho-item {
+    margin-top: 14px;
+    background: rgba(245, 176, 66, 0.06);
+    border-radius: 12px;
+    padding: 16px;
+    border: 1px solid rgba(245, 176, 66, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.vinho-info {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.vinho-info i {
+    color: #f5b042;
+}
+
+.vinho-label {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.8rem;
+}
+
+.vinho-price {
+    color: #f5b042;
+    font-weight: 600;
+    font-size: 0.85rem;
+}
+
+.vinho-obs {
+    margin-top: 12px;
+    font-size: 0.75rem;
+    color: rgba(255, 255, 255, 0.4);
+    font-style: italic;
+}
+
+.vinho-obs i {
+    color: #f5b042;
 }
 
 /* ===== HIGHLIGHT ===== */
